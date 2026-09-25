@@ -1,0 +1,2735 @@
+/* Customer-facing palette. The admin interface deliberately keeps its own neutral palette. */
+body:has(.catalog-shell),
+body:has(.product-page),
+body:has(.checkout-page),
+body:has(.policy-page) {
+  --violet: #6738dd;
+  --violet-dark: #4720ad;
+  --violet-bright: #a64cff;
+  --violet-soft: #f0eaff;
+  --violet-line: #ded2ff;
+  --aqua: #00a8bf;
+  --aqua-dark: #00788f;
+  --aqua-soft: #e5fbff;
+  --raspberry: #e83a88;
+  --raspberry-soft: #fff0f7;
+  --lime: #eaff68;
+  --ink: #251d37;
+  --muted: #726b82;
+  --line: #e6e0ef;
+  --canvas: #faf9ff;
+}
+
+body:has(.catalog-shell),
+body:has(.product-page),
+body:has(.checkout-page),
+body:has(.policy-page) {
+  background: radial-gradient(circle at 92% 4%, rgba(174, 114, 255, .1), transparent 24rem), radial-gradient(circle at 5% 30%, rgba(104, 57, 222, .055), transparent 26rem), #fff;
+}
+
+.catalog-shell, .product-page, .checkout-page, .policy-page { position: relative; }
+.catalog-shell::before, .product-page::before {
+  position: absolute; z-index: -1; top: 130px; right: -18vw; width: 42vw; height: 42vw; border-radius: 50%;
+  background: radial-gradient(circle, rgba(185, 124, 255, .09), transparent 67%); content: ""; pointer-events: none;
+}
+
+.home-hero-cta, .add-to-cart, .checkout-button, .detail-buy, .sticky-purchase > button, .bundle-offer footer button, .checkout-upsell-product button, .quick-order-trigger, .callback-submit, .favorite-add-to-cart, .review-form button, .brand-spotlight-copy > button {
+  border: 0 !important; background: linear-gradient(135deg, var(--violet) 0%, var(--violet-bright) 100%) !important; color: #fff !important;
+  box-shadow: 0 12px 24px rgba(103, 56, 221, .23) !important; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease !important;
+}
+
+.home-hero-cta:hover, .add-to-cart:hover, .checkout-button:hover, .detail-buy:hover, .sticky-purchase > button:hover, .bundle-offer footer button:hover, .checkout-upsell-product button:hover, .quick-order-trigger:hover, .callback-submit:hover, .favorite-add-to-cart:hover, .review-form button:hover, .brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, var(--violet-dark) 0%, #8d32ee 100%) !important; filter: saturate(1.1); box-shadow: 0 16px 28px rgba(103, 56, 221, .31) !important; transform: translateY(-2px);
+}
+
+.detail-buy:disabled, .add-to-cart:disabled, .favorite-add-to-cart:disabled { background: #e8e4ef !important; color: #9b95a7 !important; box-shadow: none !important; }
+.price-row strong, .detail-price strong, .cart-total strong, .cart-line strong, .favorite-line strong, .checkout-order-summary strong { color: var(--violet) !important; }
+.product-badge, .sale-badge, .bundle-offer .bundle-badge { background: #eaff68 !important; color: #302247 !important; box-shadow: 0 5px 13px rgba(184, 205, 20, .18); }
+
+.catalog-tag-filters button.active, .top-products-tabs button.active { background: var(--violet) !important; color: #fff !important; box-shadow: 0 7px 16px rgba(103, 56, 221, .18); }
+.catalog-tag-filters button.active b { background: rgba(255, 255, 255, .22) !important; color: #fff !important; }
+.category-card:hover, .product-image-wrap:hover { border-color: #c7b2ff !important; box-shadow: 0 14px 28px rgba(92, 54, 193, .13) !important; }
+
+.product-site-header .category-trigger, .catalog-trigger { border-color: #d8caff !important; background: linear-gradient(135deg, #f7f3ff, #ebe2ff) !important; color: var(--violet-dark) !important; box-shadow: none !important; }
+.product-site-header .category-trigger:hover, .catalog-trigger:hover { border-color: #bda2ff !important; background: #e8ddff !important; color: var(--violet-dark) !important; }
+.search:focus-within, .callback-modal input:focus { border-color: var(--violet) !important; box-shadow: 0 0 0 4px rgba(103, 56, 221, .13) !important; }
+.product-summary-lead, .trust-grid, .checkout-step-card, .cart-upsell, .bundle-offer { border-color: #e4dafb !important; background: linear-gradient(135deg, #fff 0%, #faf7ff 100%); }
+.trust-grid b, .checkout-step-number, .bundle-offer .bundle-kicker { background: #f1ebff !important; color: var(--violet) !important; }
+.site-footer { background: linear-gradient(118deg, #201535 0%, #412078 52%, #6b31b5 100%) !important; }
+.site-footer nav a:hover { color: #eadbff !important; }
+
+/* Secondary actions get their own bright role instead of competing with the main purchase CTA. */
+.quick-order-trigger, .callback-submit, .site-footer-callback {
+  background: linear-gradient(135deg, var(--aqua) 0%, #27d3d0 100%) !important;
+  box-shadow: 0 12px 24px rgba(0, 168, 191, .2) !important;
+}
+.quick-order-trigger:hover, .callback-submit:hover, .site-footer-callback:hover {
+  background: linear-gradient(135deg, var(--aqua-dark) 0%, #00ada8 100%) !important;
+  box-shadow: 0 16px 28px rgba(0, 168, 191, .3) !important;
+}
+.callback-button, .mobile-callback-button {
+  border-color: #82e0e2 !important;
+  background: linear-gradient(135deg, #efffff, var(--aqua-soft)) !important;
+  color: var(--aqua-dark) !important;
+}
+.callback-button:hover, .mobile-callback-button:hover {
+  border-color: var(--aqua) !important;
+  background: #d8fbff !important;
+  color: var(--aqua-dark) !important;
+}
+.detail-favorite.active, .card-favorite.active, .favorite-count.active, .favorite-button.active {
+  border-color: #ffc1df !important;
+  background: var(--raspberry-soft) !important;
+  color: var(--raspberry) !important;
+  box-shadow: 0 8px 18px rgba(232, 58, 136, .14) !important;
+}
+.detail-favorite:hover, .card-favorite:hover, .favorite-count:hover, .favorite-button:hover { color: var(--raspberry) !important; }
+.stock.in-stock, .checkout-total-savings, .bundle-offer .bundle-saving { color: #14945d !important; }
+.site-footer .site-footer-brand > a span { color: var(--lime) !important; }
+.site-footer .site-footer-bottom { border-color: rgba(234, 218, 255, .26) !important; }
+
+/* Clean wordmark: the wow lives in the shopping experience, not a gimmicky logo icon. */
+.heymom-logo {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+  color: var(--ink) !important;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  letter-spacing: -2.2px !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+.heymom-logo-word { color: inherit !important; }
+.heymom-logo-word b { color: #29203d !important; font-weight: 900; }
+.heymom-logo-word em {
+  display: inline-block;
+  margin-left: 1px;
+  background: linear-gradient(100deg, #5a2acb 5%, #b934d7 56%, #ef4b9c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  font-style: normal;
+  font-weight: 900;
+}
+.heymom-logo-spark {
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: 13px 0 0 1px;
+  border-radius: 999px;
+  background: var(--lime);
+  box-shadow: 0 0 0 3px rgba(234, 255, 104, .22), 0 0 14px rgba(202, 240, 55, .65);
+}
+.site-footer-brand > .heymom-logo { font-size: 30px !important; }
+.site-footer .heymom-logo-word b { color: #fff !important; }
+.site-footer .heymom-logo-word em { background-image: linear-gradient(100deg, #eaff68, #7feee9 78%); }
+
+@media (max-width: 800px) {
+  .product-site-header .heymom-logo { font-size: 31px !important; gap: 4px; }
+  .product-site-header .heymom-logo-spark { width: 6px; height: 6px; margin-top: 11px; }
+}
+
+/* Editorial first screen: the image stays emotional, while the copy gets real visual authority. */
+.home-billboard {
+  border: 1px solid rgba(117, 69, 224, .4) !important;
+  background: #211236 !important;
+  box-shadow: 0 28px 68px rgba(52, 23, 111, .22), inset 0 1px 0 rgba(255, 255, 255, .12) !important;
+}
+.home-billboard::before {
+  position: absolute;
+  z-index: 1;
+  top: -46%;
+  left: 30%;
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(182, 85, 255, .5), rgba(182, 85, 255, 0) 68%);
+  content: "";
+  filter: blur(3px);
+  pointer-events: none;
+}
+.home-billboard::after {
+  z-index: 1 !important;
+  background: linear-gradient(92deg, rgba(25, 12, 51, .99) 0%, rgba(47, 23, 90, .95) 37%, rgba(75, 34, 134, .6) 57%, rgba(35, 15, 68, .08) 82%) !important;
+}
+.home-billboard-content { z-index: 2 !important; }
+.home-billboard-content .eyebrow { color: var(--lime) !important; }
+.home-billboard-content h1 { color: #fff !important; text-wrap: balance; }
+.home-billboard-content p { color: #e0d7f5 !important; }
+.home-billboard .home-hero-cta {
+  border: 1px solid rgba(255, 255, 255, .28) !important;
+  background: linear-gradient(135deg, var(--lime), #f9d84c) !important;
+  color: #26183d !important;
+  box-shadow: 0 15px 28px rgba(8, 3, 25, .3) !important;
+}
+.home-billboard .home-hero-cta:hover { background: linear-gradient(135deg, #f3ff9a, #ffcd3d) !important; }
+.home-billboard-controls>div button.active { background: var(--lime) !important; }
+.home-billboard-controls>button:hover { color: var(--lime) !important; }
+
+/* Category cards become a visual product selector, not a row of miniature white boxes. */
+.category-rail {
+  border-color: #e2d8fb !important;
+  background: linear-gradient(135deg, #fff 0%, #f6f1ff 100%) !important;
+  box-shadow: 0 18px 44px rgba(83, 47, 156, .08);
+}
+.category-card {
+  border-color: #e8dffc !important;
+  background: linear-gradient(145deg, #fff 0%, #f8f4ff 100%) !important;
+}
+.category-card:nth-child(3n + 1)::after,
+.category-card:nth-child(3n + 2)::after,
+.category-card:nth-child(3n)::after {
+  position: absolute;
+  z-index: 0;
+  top: -45px;
+  right: -35px;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  content: "";
+}
+.category-card:nth-child(3n + 1)::after { background: rgba(173, 93, 255, .12); }
+.category-card:nth-child(3n + 2)::after { background: rgba(33, 202, 209, .12); }
+.category-card:nth-child(3n)::after { background: rgba(234, 255, 104, .28); }
+.category-card img { z-index: 1; }
+.category-card span, .category-card small { z-index: 2 !important; }
+.category-card small { color: var(--violet) !important; }
+
+/* The purchasing panel feels like a considered product decision, not a loose pile of controls. */
+.product-page .product-summary {
+  padding: 22px;
+  border: 1px solid #e2d8fb;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(196, 125, 255, .16), transparent 34%),
+    linear-gradient(145deg, #fff 0%, #faf7ff 100%);
+  box-shadow: 0 18px 44px rgba(77, 41, 148, .1);
+}
+.product-page .product-summary > h1 { color: #241b38; }
+.product-page .detail-price strong {
+  background: linear-gradient(100deg, #5e2bca, #cf3aa4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+.product-page .product-summary-lead {
+  border-color: #e5dafb !important;
+  background: rgba(255, 255, 255, .72) !important;
+}
+.product-page .trust-grid-before-purchase {
+  border-color: #ddd0ff !important;
+  background: linear-gradient(135deg, #f7f2ff, #edfcff) !important;
+}
+.product-page .detail-favorite {
+  border-color: #efd5e4 !important;
+  background: #fff8fc !important;
+}
+.product-page .quick-order-trigger { border-radius: 12px !important; }
+
+@media (max-width: 800px) {
+  .product-page .product-summary { padding: 17px; border-radius: 18px; }
+}
+
+@media (max-width: 800px) {
+  .home-billboard::after { background: linear-gradient(180deg, rgba(25, 12, 51, .97) 0%, rgba(47, 23, 90, .88) 37%, rgba(59, 24, 104, .18) 76%, rgba(20, 9, 40, .05) 100%) !important; }
+  .home-billboard::before { top: 22%; left: 36%; width: 82%; }
+  .home-billboard-content { padding-top: 38px !important; }
+  .home-billboard-content h1 { font-size: 39px !important; letter-spacing: -1.8px !important; }
+  .home-billboard-content p { max-width: 285px; }
+}
+
+@media (max-width: 800px) {
+  .home-hero-cta, .add-to-cart, .checkout-button, .detail-buy, .sticky-purchase > button, .bundle-offer footer button, .checkout-upsell-product button, .quick-order-trigger, .callback-submit, .favorite-add-to-cart, .review-form button, .brand-spotlight-copy > button { box-shadow: 0 8px 18px rgba(103, 56, 221, .22) !important; }
+}
+
+/* Alt art direction: warm stone + deep teal. It replaces the candy-violet mood
+   with a calmer, more premium medical store character. */
+body:has(.catalog-shell),
+body:has(.product-page),
+body:has(.checkout-page),
+body:has(.policy-page) {
+  /* Keep legacy storefront controls in the same palette too. A lot of the
+     first-generation UI consumes --blue/--yellow rather than the new tokens. */
+  --blue: #087b78;
+  --blue-dark: #045b61;
+  --yellow: #ffd166;
+  --violet: #087b78;
+  --violet-dark: #045b61;
+  --violet-bright: #12aaa2;
+  --violet-soft: #e9f7f3;
+  --violet-line: #c7e5dd;
+  --aqua: #ef7657;
+  --aqua-dark: #c9503d;
+  --aqua-soft: #fff0e9;
+  --raspberry: #c7515c;
+  --raspberry-soft: #fff0f1;
+  --lime: #ffd166;
+  --ink: #1d3031;
+  --muted: #647878;
+  --line: #dce9e4;
+  --canvas: #f7f5ef;
+  background: radial-gradient(circle at 92% 4%, rgba(17, 166, 156, .11), transparent 25rem), radial-gradient(circle at 5% 30%, rgba(239, 118, 87, .07), transparent 27rem), #fffdf9;
+}
+.catalog-shell::before, .product-page::before { background: radial-gradient(circle, rgba(30, 165, 153, .11), transparent 67%); }
+
+.heymom-logo-word b { color: #1d3031 !important; }
+.heymom-logo-word em { background-image: linear-gradient(100deg, #087b78 8%, #11a9a0 50%, #ef7657 100%); }
+.heymom-logo-spark { background: #ffd166; box-shadow: 0 0 0 3px rgba(255, 209, 102, .23), 0 0 14px rgba(255, 190, 72, .58); }
+.site-footer { background: linear-gradient(118deg, #112b30 0%, #075b61 52%, #0b8d88 100%) !important; }
+.site-footer .heymom-logo-word em { background-image: linear-gradient(100deg, #ffd166, #8ef1df 78%); }
+
+.home-billboard { border-color: rgba(10, 127, 121, .5) !important; background: #113238 !important; box-shadow: 0 28px 68px rgba(12, 74, 73, .23), inset 0 1px 0 rgba(255, 255, 255, .13) !important; }
+.home-billboard::before { background: radial-gradient(circle, rgba(42, 207, 191, .48), rgba(42, 207, 191, 0) 68%); }
+.home-billboard::after { background: linear-gradient(92deg, rgba(12, 42, 46, .99) 0%, rgba(9, 83, 86, .94) 38%, rgba(17, 130, 123, .52) 59%, rgba(18, 58, 57, .07) 82%) !important; }
+.home-billboard-content .eyebrow { color: #ffd166 !important; }
+.home-billboard-content p { color: #d7f0ea !important; }
+.home-billboard .home-hero-cta { background: linear-gradient(135deg, #ffd166, #f2a65a) !important; color: #233636 !important; box-shadow: 0 15px 28px rgba(7, 35, 38, .3) !important; }
+.home-billboard .home-hero-cta:hover { background: linear-gradient(135deg, #ffe39a, #ffc06f) !important; }
+.home-billboard-controls>div button.active { background: #ffd166 !important; }
+.home-billboard-controls>button:hover { color: #ffd166 !important; }
+
+.category-rail { border-color: #cfe7df !important; background: linear-gradient(135deg, #fffdf9 0%, #edf8f4 100%) !important; box-shadow: 0 18px 44px rgba(25, 108, 97, .09); }
+.category-card { border-color: #d7ebe5 !important; background: linear-gradient(145deg, #fff 0%, #f2fbf7 100%) !important; }
+.category-card:nth-child(3n + 1)::after { background: rgba(14, 163, 153, .12); }
+.category-card:nth-child(3n + 2)::after { background: rgba(239, 118, 87, .12); }
+.category-card:nth-child(3n)::after { background: rgba(255, 209, 102, .22); }
+.category-card small { color: #087b78 !important; }
+
+.product-site-header .category-trigger, .catalog-trigger { border-color: #b9dfd5 !important; background: linear-gradient(135deg, #eefbf7, #dff3ec) !important; color: #045b61 !important; }
+.product-site-header .category-trigger:hover, .catalog-trigger:hover { border-color: #78beb2 !important; background: #d8f1e9 !important; color: #045b61 !important; }
+.home-search-box, .search {
+  border-color: #a9d7cc !important;
+  background: #fffefa !important;
+  box-shadow: 0 10px 26px rgba(8, 123, 120, .12);
+}
+.home-search-box:focus-within { box-shadow: 0 12px 30px rgba(8, 123, 120, .2) !important; }
+.search-autocomplete-icon, .search-autocomplete-enter { color: #087b78 !important; }
+.search-autocomplete-enter { background: #e7f7f1 !important; }
+.search-suggestions { border-color: #d2e8e1 !important; background: #fffefa !important; box-shadow: 0 18px 42px rgba(10, 73, 72, .17) !important; }
+.search-suggestions > a:hover { background: #edf9f5 !important; }
+.search:focus-within, .callback-modal input:focus { border-color: #087b78 !important; box-shadow: 0 0 0 4px rgba(8, 123, 120, .13) !important; }
+
+/* The product shelf is the conversion surface: make it feel composed even
+   after the visitor scrolls away from the hero. */
+.product-image-wrap { border-color: #edf1e9 !important; background: #fffefa !important; }
+.product-card:hover .product-image-wrap { border-color: #94cfc2 !important; box-shadow: 0 14px 30px rgba(8, 123, 120, .1); }
+.product-card h2 a:hover, .cart-button:hover { color: #087b78 !important; }
+.product-badge { background: #ffd166 !important; color: #44310b !important; }
+.card-favorite { border-color: #d8e7e1 !important; color: #46615f !important; }
+.card-favorite.active { color: #d45b61 !important; }
+.top-products-head p { color: #087b78 !important; }
+.top-products-head h2 { color: #1d3031 !important; }
+.top-products-tabs button.active { background: #e5f7f1 !important; color: #05706d !important; }
+.filters, .checkout-form > section, .order-summary, .cart-drawer { border-color: #d8e8e2 !important; background: #fffefa !important; }
+.filters > button:not(.filters-close):hover, .filters > button.selected { background: #edf9f5 !important; color: #087b78 !important; }
+.checkout-options label:has(input:checked) { border-color: #8dcfc2 !important; background: #edf9f5 !important; color: #075c5c !important; }
+.checkout-fields input:focus { border-color: #087b78 !important; box-shadow: 0 0 0 3px rgba(8, 123, 120, .12) !important; }
+
+.product-page .product-summary { border-color: #c9e4dc; background: radial-gradient(circle at 100% 0, rgba(33, 189, 171, .15), transparent 34%), linear-gradient(145deg, #fffefa 0%, #f0faf6 100%); box-shadow: 0 18px 44px rgba(18, 103, 93, .11); }
+.product-page .product-summary > h1 { color: #1d3031; }
+.product-page .detail-price strong { background-image: linear-gradient(100deg, #057a76, #e36250); }
+.product-page .product-summary-lead { border-color: #d5ebe5 !important; }
+.product-page .trust-grid-before-purchase { border-color: #c8e4db !important; background: linear-gradient(135deg, #edf9f4, #fff5ed) !important; }
+
+.quick-order-trigger, .callback-submit, .site-footer-callback { background: linear-gradient(135deg, #ef7657 0%, #f49c57 100%) !important; box-shadow: 0 12px 24px rgba(211, 86, 62, .22) !important; }
+.quick-order-trigger:hover, .callback-submit:hover, .site-footer-callback:hover { background: linear-gradient(135deg, #c9503d 0%, #e5793f 100%) !important; box-shadow: 0 16px 28px rgba(201, 80, 61, .3) !important; }
+.callback-button, .mobile-callback-button { border-color: #f3b3a4 !important; background: linear-gradient(135deg, #fff8f5, #fff0e9) !important; color: #b44b3d !important; }
+.callback-button:hover, .mobile-callback-button:hover { border-color: #ef7657 !important; background: #ffe7dd !important; color: #9e3f33 !important; }
+
+@media (max-width: 800px) {
+  .home-billboard::after { background: linear-gradient(180deg, rgba(12, 42, 46, .97) 0%, rgba(9, 83, 86, .88) 37%, rgba(17, 130, 123, .18) 76%, rgba(8, 40, 41, .05) 100%) !important; }
+  .home-hero-cta, .add-to-cart, .checkout-button, .detail-buy, .sticky-purchase > button, .bundle-offer footer button, .checkout-upsell-product button, .quick-order-trigger, .callback-submit, .favorite-add-to-cart, .review-form button, .brand-spotlight-copy > button { box-shadow: 0 8px 18px rgba(8, 123, 120, .22) !important; }
+}
+
+/* Electric violet is the storefront's public character. These declarations
+   deliberately sit last because the earlier warm-teal experiment is retained
+   above for reference, while the live result must have one decisive palette. */
+body:has(.catalog-shell),
+body:has(.product-page),
+body:has(.checkout-page),
+body:has(.policy-page) {
+  --blue: #6738dd;
+  --blue-dark: #4720ad;
+  --yellow: #eaff68;
+  --violet: #6738dd;
+  --violet-dark: #4720ad;
+  --violet-bright: #a64cff;
+  --violet-soft: #f0eaff;
+  --violet-line: #ded2ff;
+  --aqua: #00a8bf;
+  --aqua-dark: #00788f;
+  --aqua-soft: #e5fbff;
+  --ink: #251d37;
+  --muted: #726b82;
+  --line: #e6e0ef;
+  --canvas: #faf9ff;
+  background: radial-gradient(circle at 92% 4%, rgba(174, 114, 255, .13), transparent 25rem), radial-gradient(circle at 5% 30%, rgba(232, 58, 136, .06), transparent 27rem), #fff;
+}
+
+.catalog-shell::before, .product-page::before { background: radial-gradient(circle, rgba(185, 124, 255, .12), transparent 67%); }
+.heymom-logo-word b { color: #29203d !important; }
+.heymom-logo-word em { background-image: linear-gradient(100deg, #5a2acb 5%, #b934d7 56%, #ef4b9c 100%); }
+.heymom-logo-spark { background: #eaff68; box-shadow: 0 0 0 3px rgba(234, 255, 104, .24), 0 0 14px rgba(197, 226, 50, .56); }
+.site-footer { background: linear-gradient(118deg, #201535 0%, #412078 52%, #6b31b5 100%) !important; }
+.site-footer .heymom-logo-word em { background-image: linear-gradient(100deg, #eaff68, #72f0e5 78%); }
+
+.home-billboard { border-color: rgba(132, 83, 236, .58) !important; background: #21123e !important; box-shadow: 0 28px 68px rgba(76, 32, 156, .27), inset 0 1px 0 rgba(255, 255, 255, .13) !important; }
+.home-billboard::before { background: radial-gradient(circle, rgba(184, 76, 255, .52), rgba(184, 76, 255, 0) 68%); }
+.home-billboard::after { background: linear-gradient(92deg, rgba(31, 15, 61, .99) 0%, rgba(68, 30, 126, .94) 38%, rgba(128, 56, 205, .5) 59%, rgba(28, 10, 60, .07) 82%) !important; }
+.home-billboard-content .eyebrow { color: #eaff68 !important; }
+.home-billboard-content p { color: #eee8ff !important; }
+.home-billboard .home-hero-cta { background: linear-gradient(135deg, #6738dd, #b743f4) !important; color: #fff !important; box-shadow: 0 15px 28px rgba(25, 8, 64, .36) !important; }
+.home-billboard .home-hero-cta:hover { background: linear-gradient(135deg, #4720ad, #8d32ee) !important; }
+.home-billboard-controls > div button.active { background: #eaff68 !important; }
+.home-billboard-controls > button:hover { color: #eaff68 !important; }
+
+.category-rail { border-color: #e2d8fb !important; background: linear-gradient(135deg, #fff 0%, #faf7ff 100%) !important; box-shadow: 0 18px 44px rgba(77, 41, 148, .09); }
+.category-card { border-color: #e8e0f6 !important; background: linear-gradient(145deg, #fff 0%, #fbf9ff 100%) !important; }
+.category-card:nth-child(3n + 1)::after { background: rgba(173, 93, 255, .12); }
+.category-card:nth-child(3n + 2)::after { background: rgba(33, 202, 209, .12); }
+.category-card:nth-child(3n)::after { background: rgba(234, 255, 104, .28); }
+.category-card small { color: #6738dd !important; }
+
+.product-site-header .category-trigger, .catalog-trigger { border-color: #d8caff !important; background: linear-gradient(135deg, #f7f3ff, #ebe2ff) !important; color: #4720ad !important; }
+.product-site-header .category-trigger:hover, .catalog-trigger:hover { border-color: #bda2ff !important; background: #e8ddff !important; color: #4720ad !important; }
+.home-search-box, .search { border-color: #cfbfff !important; background: #fff !important; box-shadow: 0 10px 26px rgba(103, 56, 221, .12); }
+.home-search-box:focus-within { box-shadow: 0 12px 30px rgba(103, 56, 221, .2) !important; }
+.search-autocomplete-icon, .search-autocomplete-enter { color: #6738dd !important; }
+.search-autocomplete-enter { background: #f0eaff !important; }
+.search-suggestions { border-color: #e1d8f7 !important; background: #fff !important; box-shadow: 0 18px 42px rgba(50, 25, 99, .17) !important; }
+.search-suggestions > a:hover { background: #faf7ff !important; }
+.search:focus-within, .callback-modal input:focus { border-color: #6738dd !important; box-shadow: 0 0 0 4px rgba(103, 56, 221, .13) !important; }
+
+.product-image-wrap { border-color: #f0ecf7 !important; background: #fff !important; }
+.product-card:hover .product-image-wrap { border-color: #c7b2ff !important; box-shadow: 0 14px 30px rgba(92, 54, 193, .13); }
+.product-card h2 a:hover, .cart-button:hover { color: #6738dd !important; }
+.product-badge { padding: 6px 10px !important; border: 1px solid rgba(86, 101, 8, .12); background: linear-gradient(135deg, #eaff68, #c8f03b) !important; color: #302247 !important; font-weight: 900 !important; letter-spacing: .02em; box-shadow: 0 6px 15px rgba(154, 187, 17, .22) !important; }
+.card-favorite { border-color: #e2d9f1 !important; color: #5d5571 !important; }
+.top-products-head p { color: #6738dd !important; }
+.top-products-head h2 { color: #251d37 !important; }
+.top-products-tabs button.active { background: #f0eaff !important; color: #5a2acb !important; }
+.filters, .checkout-form > section, .order-summary, .cart-drawer { border-color: #e2d9f1 !important; background: #fff !important; }
+.filters > button:not(.filters-close):hover, .filters > button.selected { background: #f8f5ff !important; color: #6738dd !important; }
+.checkout-options label:has(input:checked) { border-color: #bfa8ff !important; background: #f6f2ff !important; color: #4720ad !important; }
+.checkout-fields input:focus { border-color: #6738dd !important; box-shadow: 0 0 0 3px rgba(103, 56, 221, .12) !important; }
+
+.product-page .product-summary { border-color: #dfd3fb; background: radial-gradient(circle at 100% 0, rgba(196, 125, 255, .16), transparent 34%), linear-gradient(145deg, #fff 0%, #faf7ff 100%); box-shadow: 0 18px 44px rgba(77, 41, 148, .11); }
+.product-page .product-summary > h1 { color: #251d37; }
+.product-page .detail-price strong { background-image: linear-gradient(100deg, #5e2bca, #cf3aa4); }
+.product-page .product-summary-lead { border-color: #e5dafb !important; }
+.product-page .trust-grid-before-purchase { border-color: #ddd0ff !important; background: linear-gradient(135deg, #f7f2ff, #edfcff) !important; }
+
+/* Callback stays cyan: it is a helper action, visibly separate from purchase. */
+.quick-order-trigger, .callback-submit, .site-footer-callback { background: linear-gradient(135deg, #00a8bf 0%, #27d3d0 100%) !important; box-shadow: 0 12px 24px rgba(0, 168, 191, .2) !important; }
+.quick-order-trigger:hover, .callback-submit:hover, .site-footer-callback:hover { background: linear-gradient(135deg, #00788f 0%, #00ada8 100%) !important; box-shadow: 0 16px 28px rgba(0, 168, 191, .3) !important; }
+.callback-button, .mobile-callback-button { border-color: #82e0e2 !important; background: linear-gradient(135deg, #efffff, #e5fbff) !important; color: #00788f !important; }
+.callback-button:hover, .mobile-callback-button:hover { border-color: #00a8bf !important; background: #d8fbff !important; color: #00788f !important; }
+
+@media (max-width: 800px) {
+  .home-billboard::after { background: linear-gradient(180deg, rgba(25, 12, 51, .97) 0%, rgba(47, 23, 90, .88) 37%, rgba(59, 24, 104, .18) 76%, rgba(20, 9, 40, .05) 100%) !important; }
+  .home-hero-cta, .add-to-cart, .checkout-button, .detail-buy, .sticky-purchase > button, .bundle-offer footer button, .checkout-upsell-product button, .quick-order-trigger, .callback-submit, .favorite-add-to-cart, .review-form button, .brand-spotlight-copy > button { box-shadow: 0 8px 18px rgba(103, 56, 221, .22) !important; }
+}
+
+/* Let the real banner photography carry the scene; colour supports it instead
+   of covering it. The thermometer scene needs the monochrome father kept in
+   frame rather than clipped above the banner. */
+.home-billboard::after {
+  background: linear-gradient(92deg, rgba(31, 15, 61, .82) 0%, rgba(68, 30, 126, .67) 38%, rgba(128, 56, 205, .20) 59%, rgba(28, 10, 60, 0) 82%) !important;
+}
+.home-billboard::before { opacity: .42; }
+.home-billboard-thermometer .home-billboard-image {
+  object-position: center 30% !important;
+}
+@media (max-width: 800px) {
+  .home-billboard::after {
+    background: linear-gradient(180deg, rgba(25, 12, 51, .83) 0%, rgba(47, 23, 90, .66) 37%, rgba(59, 24, 104, .08) 76%, rgba(20, 9, 40, 0) 100%) !important;
+  }
+  .home-billboard-thermometer .home-billboard-image { object-position: center 48% !important; }
+}
+
+/* Final storefront direction: neon violet environment + acid-green buy actions. */
+:root {
+  --blue: #7a38ff;
+  --blue-dark: #4313a6;
+  --yellow: #c9ff35;
+}
+.home-billboard,
+.site-footer {
+  box-shadow: 0 0 0 1px rgba(196, 122, 255, .26), 0 25px 62px rgba(93, 25, 190, .29) !important;
+}
+.category-rail,
+.product-page .product-summary {
+  background: radial-gradient(circle at 100% 0, rgba(199, 102, 255, .19), transparent 38%), linear-gradient(145deg, #fff 0%, #faf6ff 100%) !important;
+}
+.product-site-header .category-trigger,
+.catalog-trigger,
+.top-products-tabs button.active {
+  box-shadow: 0 0 0 1px rgba(143, 72, 255, .08), 0 7px 18px rgba(117, 49, 227, .13) !important;
+}
+.home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #dcff4d 0%, #a9ee1d 100%) !important;
+  border-color: #b5f12b !important;
+  color: #26153b !important;
+  box-shadow: 0 12px 26px rgba(146, 213, 20, .32), inset 0 1px 0 rgba(255, 255, 255, .52) !important;
+}
+.home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, #edff7b 0%, #b8ff24 100%) !important;
+  color: #1d102e !important;
+  box-shadow: 0 16px 32px rgba(146, 213, 20, .43), inset 0 1px 0 rgba(255, 255, 255, .62) !important;
+}
+
+/* Win over earlier component-specific button rules without recolouring navigation. */
+body .home-billboard .home-hero-cta,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  background: linear-gradient(135deg, #dcff4d 0%, #a9ee1d 100%) !important;
+  border-color: #b5f12b !important;
+  color: #26153b !important;
+  box-shadow: 0 12px 26px rgba(146, 213, 20, .32), inset 0 1px 0 rgba(255, 255, 255, .52) !important;
+}
+body .home-billboard .home-hero-cta:hover,
+body .product-card .add-to-cart:hover,
+body .product-summary .detail-buy:hover,
+body .checkout-page .checkout-button:hover,
+body .cart-drawer .checkout-button:hover {
+  background: linear-gradient(135deg, #edff7b 0%, #b8ff24 100%) !important;
+}
+
+/* Electric blue replaces violet as the storefront's primary energy. */
+:root {
+  --blue: #1357e8;
+  --blue-dark: #081a4b;
+  --violet: #1357e8;
+  --violet-dark: #081a4b;
+  --violet-bright: #23c8ff;
+}
+.site-footer {
+  background: linear-gradient(118deg, #071634 0%, #0c3a96 54%, #156ee8 100%) !important;
+}
+.home-billboard {
+  background: #071a4b !important;
+  border-color: rgba(35, 200, 255, .62) !important;
+  box-shadow: 0 0 0 1px rgba(35, 200, 255, .18), 0 25px 62px rgba(12, 76, 198, .31) !important;
+}
+.home-billboard::before {
+  background: radial-gradient(circle, rgba(35, 200, 255, .42), rgba(35, 200, 255, 0) 68%) !important;
+}
+.home-billboard::after {
+  background: linear-gradient(92deg, rgba(5, 20, 61, .84) 0%, rgba(10, 57, 150, .67) 38%, rgba(23, 139, 232, .18) 60%, rgba(5, 20, 61, 0) 82%) !important;
+}
+.home-billboard-content .eyebrow,
+.top-products-head p,
+.category-card small { color: #1357e8 !important; }
+.category-rail,
+.product-page .product-summary {
+  background: radial-gradient(circle at 100% 0, rgba(35, 200, 255, .18), transparent 38%), linear-gradient(145deg, #fff 0%, #f2f8ff 100%) !important;
+  border-color: #d5e8ff !important;
+}
+.category-card {
+  border-color: #d9e9ff !important;
+  background: linear-gradient(145deg, #fff 0%, #f5faff 100%) !important;
+}
+.category-card:nth-child(3n + 1)::after { background: rgba(35, 200, 255, .13) !important; }
+.category-card:nth-child(3n + 2)::after { background: rgba(19, 87, 232, .10) !important; }
+.category-card:nth-child(3n)::after { background: rgba(201, 255, 53, .22) !important; }
+.product-site-header .category-trigger,
+.catalog-trigger,
+.top-products-tabs button.active {
+  border-color: #bae6ff !important;
+  background: linear-gradient(135deg, #f0faff, #dff3ff) !important;
+  color: #0756bf !important;
+}
+.home-search-box,
+.search {
+  border-color: #9edfff !important;
+  box-shadow: 0 10px 26px rgba(19, 87, 232, .12) !important;
+}
+.home-search-box:focus-within,
+.search:focus-within,
+.callback-modal input:focus,
+.checkout-fields input:focus {
+  border-color: #1357e8 !important;
+  box-shadow: 0 0 0 4px rgba(35, 200, 255, .18) !important;
+}
+.product-page .detail-price strong { background-image: linear-gradient(100deg, #075bd2, #19bde9) !important; }
+.product-page .trust-grid-before-purchase {
+  border-color: #c8e9ff !important;
+  background: linear-gradient(135deg, #effaff, #f7fdff) !important;
+}
+@media (max-width: 800px) {
+  .home-billboard::after {
+    background: linear-gradient(180deg, rgba(5, 20, 61, .85) 0%, rgba(10, 57, 150, .65) 38%, rgba(23, 139, 232, .08) 77%, rgba(5, 20, 61, 0) 100%) !important;
+  }
+}
+.heymom-logo-word em {
+  background-image: linear-gradient(100deg, #1357e8 8%, #23c8ff 72%, #c9ff35 100%) !important;
+}
+
+/* The logo owns the organic note: an electric-blue wordmark with a tiny leaf. */
+.heymom-logo-word b { color: #082b68 !important; }
+.heymom-logo-word em {
+  background-image: linear-gradient(100deg, #0d4fcc 4%, #18aee9 72%, #39d778 100%) !important;
+}
+.heymom-logo-spark {
+  position: relative;
+  width: 18px !important;
+  height: 17px !important;
+  margin: 1px 0 0 3px !important;
+  background: linear-gradient(90deg, transparent 0 8px, #159865 8px 10px, transparent 10px) center bottom / 100% 10px no-repeat !important;
+  box-shadow: none !important;
+}
+.heymom-logo-spark::before,
+.heymom-logo-spark::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 100% 0 100% 0;
+  transform-origin: center;
+}
+.heymom-logo-spark::before {
+  width: 10px;
+  height: 7px;
+  left: 0;
+  top: 2px;
+  transform: rotate(-34deg);
+  background: linear-gradient(135deg, #dfff6a 0%, #83e957 48%, #22aa6b 100%);
+  box-shadow: 0 2px 7px rgba(34, 170, 107, .16);
+}
+.heymom-logo-spark::after {
+  width: 10px;
+  height: 7px;
+  right: 0;
+  top: 2px;
+  transform: rotate(34deg);
+  background: linear-gradient(135deg, #b8ff65 0%, #61dd62 54%, #149d66 100%);
+  box-shadow: 0 2px 7px rgba(20, 157, 102, .16);
+}
+.site-footer .heymom-logo-word b { color: #fff !important; }
+.heymom-logo-mama-mark {
+  width: 23px;
+  height: 20px;
+  margin: 2px 0 0 4px;
+  overflow: visible;
+}
+.heymom-logo-mama-mark .mama-mark-parent { fill: #1198e8; }
+.heymom-logo-mama-mark .mama-mark-baby { fill: #ffd158; }
+.heymom-logo-mama-mark .mama-mark-hug {
+  fill: none;
+  stroke: #1556cf;
+  stroke-width: 2.35px;
+  stroke-linecap: round;
+}
+.heymom-logo-mama-mark .mama-mark-smile {
+  fill: none;
+  stroke: #24bdea;
+  stroke-width: 1.75px;
+  stroke-linecap: round;
+}
+.heymom-logo-care-mark {
+  width: 24px;
+  height: 20px;
+  margin: 2px 0 0 4px;
+  overflow: visible;
+}
+.heymom-logo-care-mark .care-mark-main {
+  fill: #1598e7;
+}
+.heymom-logo-care-mark .care-mark-small {
+  fill: #ffd158;
+}
+.heymom-logo-pacifier-mark {
+  width: 25px;
+  height: 23px;
+  margin: 1px 0 0 5px;
+  overflow: visible;
+}
+.heymom-logo-pacifier-mark .pacifier-shield { fill: #168df0; }
+.heymom-logo-pacifier-mark .pacifier-nipple {
+  fill: none;
+  stroke: #168df0;
+  stroke-width: 2.4px;
+  stroke-linecap: round;
+}
+.heymom-logo-pacifier-mark .pacifier-button { fill: #c9ff35; }
+.heymom-logo-pacifier-mark .pacifier-handle {
+  fill: none;
+  stroke: #168df0;
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
+.heymom-logo-word {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.heymom-logo-word em {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  letter-spacing: .5px;
+}
+.heymom-logo-pacifier-letter {
+  display: inline-flex;
+  width: .9em;
+  height: .72em;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -.03em 0 0;
+}
+.heymom-logo-pacifier-letter svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: rotate(90deg);
+}
+.heymom-logo-pacifier-letter .pacifier-shield { fill: #168df0; }
+.heymom-logo-pacifier-letter .pacifier-nipple {
+  fill: none;
+  stroke: #168df0;
+  stroke-width: 2.4px;
+  stroke-linecap: round;
+}
+.heymom-logo-pacifier-letter .pacifier-button { fill: #c9ff35; }
+.heymom-logo-pacifier-letter .pacifier-handle {
+  fill: none;
+  stroke: #168df0;
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
+.heymom-logo-rattle-mark {
+  width: 24px;
+  height: 25px;
+  margin: 1px 0 0 6px;
+  overflow: visible;
+}
+.heymom-logo-rattle-mark .rattle-head { fill: #168df0; }
+.heymom-logo-rattle-mark .rattle-dot-one { fill: #c9ff35; }
+.heymom-logo-rattle-mark .rattle-dot-two { fill: #fff; }
+.heymom-logo-rattle-mark .rattle-dot-three { fill: #794cff; }
+.heymom-logo-rattle-mark .rattle-handle {
+  fill: none;
+  stroke: #794cff;
+  stroke-width: 3.4px;
+  stroke-linecap: round;
+}
+.heymom-logo-toy-block {
+  width: 23px;
+  height: 23px;
+  margin: 1px 0 0 6px;
+}
+.heymom-logo-toy-block .toy-block-body { fill: #168df0; }
+.heymom-logo-toy-block .toy-block-star { fill: #c9ff35; }
+
+/* Next compact logo option: calm night / care mark. */
+.heymom-logo-moon-mark {
+  width: 21px;
+  height: 20px;
+  margin: 0 0 0 4px;
+  overflow: visible;
+}
+.heymom-logo-moon-mark .moon-mark-crescent { fill: #187de9; }
+.heymom-logo-moon-mark .moon-mark-star { fill: #c9ff35; }
+
+.heymom-logo-home-mark {
+  width: 22px;
+  height: 21px;
+  margin: 0 0 0 4px;
+  overflow: visible;
+}
+.heymom-logo-home-mark .home-mark-roof,
+.heymom-logo-home-mark .home-mark-body {
+  fill: none;
+  stroke: #187de9;
+  stroke-width: 2.65px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.heymom-logo-home-mark .home-mark-window { fill: #c9ff35; }
+
+.heymom-logo-baby-feet {
+  width: 23px;
+  height: 21px;
+  margin: 0 0 0 4px;
+  overflow: visible;
+}
+.heymom-logo-baby-feet .baby-foot-left { fill: #187de9; }
+.heymom-logo-baby-feet .baby-foot-right { fill: #c9ff35; }
+
+.heymom-logo-baby-foot {
+  width: 19px;
+  height: 25px;
+  margin: -1px 0 -1px 5px;
+  overflow: visible;
+}
+.heymom-logo-baby-foot .baby-foot-sole,
+.heymom-logo-baby-foot .baby-foot-toe { fill: #e8c69c; }
+
+.heymom-logo-baby-foot-blue {
+  width: 20px;
+  height: 25px;
+  margin: -1px 0 -1px 5px;
+  overflow: visible;
+}
+.heymom-logo-baby-foot-blue .baby-foot-blue-sole { fill: #168de8; }
+.heymom-logo-baby-foot-blue .baby-foot-blue-toe { fill: #51bfff; }
+
+.heymom-logo-pacifier-classic {
+  width: 25px;
+  height: 23px;
+  margin: 0 0 0 4px;
+  overflow: visible;
+}
+.heymom-logo-pacifier-classic .pacifier-classic-shield {
+  fill: #f2c5a0;
+  stroke: #dda478;
+  stroke-width: .7px;
+}
+.heymom-logo-pacifier-classic .pacifier-classic-button {
+  fill: #fff4e9;
+  stroke: #e6b28a;
+  stroke-width: .7px;
+}
+.heymom-logo-pacifier-classic .pacifier-classic-ring {
+  fill: none;
+  stroke: #e4ad83;
+  stroke-width: 2.6px;
+  stroke-linecap: round;
+}
+.heymom-logo-pacifier-image {
+  width: 1.17em;
+  height: 1.04em;
+  margin: 0 -2px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  transform: translateY(1px);
+}
+.heymom-logo-pacifier-flat {
+  width: 1.02em;
+  height: .89em;
+  margin: 0 -1px;
+  flex: 0 0 auto;
+  transform: translateY(1px);
+  overflow: visible;
+}
+.heymom-logo-pacifier-flat .pacifier-flat-shield { fill: #f2c5a0; }
+.heymom-logo-pacifier-flat .pacifier-flat-center { fill: #fff4e9; }
+.heymom-logo-pacifier-flat .pacifier-flat-handle {
+  fill: none;
+  stroke: #e0a276;
+  stroke-width: 2.25px;
+  stroke-linecap: round;
+}
+
+/* Compact next wordmark: one small mark for mum and baby, without visual noise. */
+.product-site-header .heymom-logo,
+.site-footer .heymom-logo {
+  font-size: 28px !important;
+  letter-spacing: -1.7px !important;
+}
+.heymom-logo-word { gap: 1px; }
+.heymom-logo-word em { letter-spacing: -0.25px; }
+.heymom-logo-mama-mark {
+  width: 22px;
+  height: 20px;
+  margin: 1px 0 0 4px;
+}
+@media (max-width: 800px) {
+  .product-site-header .heymom-logo {
+    font-size: 27px !important;
+    letter-spacing: -1.55px !important;
+  }
+  .product-site-header .heymom-logo-mama-mark {
+    width: 20px;
+    height: 18px;
+    margin-left: 3px;
+  }
+  .product-site-header .heymom-logo-moon-mark {
+    width: 19px;
+    height: 18px;
+    margin-left: 3px;
+  }
+  .product-site-header .heymom-logo-home-mark {
+    width: 20px;
+    height: 19px;
+    margin-left: 3px;
+  }
+  .product-site-header .heymom-logo-baby-feet {
+    width: 21px;
+    height: 19px;
+    margin-left: 3px;
+  }
+  .product-site-header .heymom-logo-baby-foot {
+    width: 18px;
+    height: 23px;
+    margin-left: 4px;
+  }
+  .product-site-header .heymom-logo-baby-foot-blue {
+    width: 19px;
+    height: 23px;
+    margin-left: 4px;
+  }
+  .product-site-header .heymom-logo-pacifier-classic {
+    width: 23px;
+    height: 21px;
+    margin-left: 3px;
+  }
+  .product-site-header .heymom-logo-pacifier-image {
+    width: 1.16em;
+    height: 1.03em;
+    margin: 0 -2px;
+  }
+}
+@media (max-width: 800px) {
+  .product-site-header .heymom-logo-mama-mark {
+    width: 20px;
+    height: 18px;
+    margin: 1px 0 0 3px;
+  }
+  .product-site-header .heymom-logo-care-mark {
+    width: 21px;
+    height: 18px;
+    margin: 1px 0 0 3px;
+  }
+  .product-site-header .heymom-logo-pacifier-mark {
+    width: 23px;
+    height: 21px;
+    margin: 1px 0 0 4px;
+  }
+}
+@media (max-width: 800px) {
+  .product-site-header .heymom-logo-spark {
+    width: 16px !important;
+    height: 14px !important;
+    margin-top: 2px !important;
+    background-size: 100% 8px !important;
+  }
+  .product-site-header .heymom-logo-spark::before {
+    width: 9px;
+    height: 7px;
+  }
+  .product-site-header .heymom-logo-spark::after {
+    width: 7px;
+    height: 6px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Premium parent-care direction. This intentionally comes last: previous
+   experiments used several neon palettes, while the storefront now has one
+   calm, high-contrast visual system with warmth reserved for key actions.
+   -------------------------------------------------------------------------- */
+:root {
+  --blue: #1769c5;
+  --blue-dark: #102a52;
+  --yellow: #ffc928;
+  --ink: #20334b;
+  --muted: #718196;
+  --canvas: #fffaf7;
+}
+
+body {
+  background: #fffaf7 !important;
+  color: #20334b !important;
+}
+
+.product-site-header {
+  background: rgba(255, 253, 251, .96) !important;
+  border-bottom-color: #e9e9ee !important;
+  box-shadow: 0 12px 30px rgba(24, 43, 76, .055) !important;
+}
+.product-site-header .product-nav { border-top-color: #edf0f4 !important; }
+.product-site-header .heymom-logo-word b { color: #102a52 !important; }
+.product-site-header .heymom-logo-word em {
+  background-image: linear-gradient(105deg, #e78261 4%, #f2af82 100%) !important;
+}
+.product-site-header .category-trigger,
+.catalog-trigger {
+  border-color: #c9dff5 !important;
+  background: #f0f7ff !important;
+  color: #1769c5 !important;
+  box-shadow: none !important;
+}
+.product-site-header .category-trigger:hover,
+.catalog-trigger:hover { background: #e1effd !important; border-color: #9fc8ed !important; }
+.product-site-header .callback-button,
+.mobile-callback-button {
+  border-color: #e6a47f !important;
+  background: #fff9f5 !important;
+  color: #b85635 !important;
+  box-shadow: none !important;
+}
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #fff0e8 !important; }
+.product-site-header .product-nav>a { color: #33475e !important; }
+.product-site-header .product-nav>a:hover { color: #1769c5 !important; }
+
+.home-billboard {
+  border: 0 !important;
+  border-radius: 28px !important;
+  background: #112a51 !important;
+  box-shadow: 0 24px 58px rgba(18, 42, 81, .2) !important;
+}
+.home-billboard::before {
+  background: radial-gradient(circle at 28% 20%, rgba(249, 177, 132, .3), transparent 40%) !important;
+  opacity: 1 !important;
+}
+.home-billboard::after {
+  background: linear-gradient(94deg, rgba(14, 35, 71, .98) 0%, rgba(20, 53, 101, .9) 36%, rgba(30, 77, 139, .38) 61%, rgba(17, 42, 81, .04) 83%) !important;
+}
+.home-billboard-content .eyebrow { color: #f5bb94 !important; }
+.home-billboard-content h1 { color: #fffdfb !important; }
+.home-billboard-content p { color: #dbe8f8 !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta {
+  border-color: #ffc928 !important;
+  background: linear-gradient(135deg, #ffd75d, #ffc928) !important;
+  color: #26364a !important;
+  box-shadow: 0 12px 24px rgba(5, 22, 51, .28) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover {
+  background: linear-gradient(135deg, #ffe48d, #ffce36) !important;
+  box-shadow: 0 15px 30px rgba(5, 22, 51, .36) !important;
+}
+.home-billboard-controls>div button { background: rgba(255,255,255,.52) !important; }
+.home-billboard-controls>div button.active { background: #f4b486 !important; }
+.home-billboard-controls>button:hover { color: #f9c19b !important; }
+
+.home-search-box,
+.search {
+  border-color: #d5e0ec !important;
+  background: #fff !important;
+  box-shadow: 0 10px 24px rgba(25, 51, 91, .07) !important;
+}
+.home-search-box:focus-within,
+.search:focus-within {
+  border-color: #79aee0 !important;
+  box-shadow: 0 0 0 4px rgba(23, 105, 197, .12) !important;
+}
+
+.category-rail,
+.product-page .product-summary {
+  border-color: #ebe5e2 !important;
+  background: linear-gradient(135deg, #fff 0%, #fff8f4 100%) !important;
+}
+.category-card {
+  border-color: #ece5e2 !important;
+  background: linear-gradient(145deg, #fff 0%, #fffaf7 100%) !important;
+  box-shadow: 0 8px 19px rgba(29, 48, 80, .045) !important;
+}
+.category-card::after { opacity: .62 !important; }
+.category-card:nth-child(3n + 1)::after { background: rgba(240, 163, 121, .18) !important; }
+.category-card:nth-child(3n + 2)::after { background: rgba(60, 151, 221, .13) !important; }
+.category-card:nth-child(3n)::after { background: rgba(255, 201, 40, .16) !important; }
+.category-card small,
+.top-products-head p { color: #1769c5 !important; }
+.category-card:hover {
+  border-color: #eebd9e !important;
+  box-shadow: 0 16px 30px rgba(160, 94, 57, .13) !important;
+  transform: translateY(-3px);
+}
+
+.top-products-tabs button.active {
+  background: #eaf4ff !important;
+  color: #1769c5 !important;
+  box-shadow: none !important;
+}
+.top-products-tabs button:hover { color: #1769c5 !important; background: #f4f9fe !important; }
+.product-card { border-radius: 16px !important; }
+.product-image-wrap {
+  border-color: #f0ece9 !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+}
+.product-card:hover .product-image-wrap {
+  border-color: #e7b79a !important;
+  box-shadow: 0 15px 30px rgba(42, 61, 92, .1) !important;
+}
+.product-card h2 a { color: #23374f !important; }
+.product-card h2 a:hover,
+.cart-button:hover { color: #1769c5 !important; }
+.product-badge { background: #f3b18a !important; color: #56301f !important; }
+
+/* Yellow remains exclusive to purchase / conversion actions. */
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #ffc928 !important;
+  background: linear-gradient(135deg, #ffd75d, #ffc928) !important;
+  color: #26364a !important;
+  box-shadow: 0 9px 20px rgba(245, 175, 31, .22) !important;
+}
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, #ffe68c, #ffce36) !important;
+  box-shadow: 0 12px 25px rgba(245, 175, 31, .3) !important;
+}
+
+.site-footer {
+  background: linear-gradient(116deg, #102a52 0%, #183e72 62%, #245f9d 100%) !important;
+  box-shadow: none !important;
+}
+.site-footer .heymom-logo-word b { color: #fff !important; }
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #f0a275, #ffd1af) !important; }
+.site-footer nav a:hover { color: #f5bb94 !important; }
+
+@media (max-width: 800px) {
+  .product-site-header { box-shadow: 0 8px 20px rgba(24, 43, 76, .045) !important; }
+  .home-billboard { border-radius: 20px !important; box-shadow: 0 18px 38px rgba(18, 42, 81, .17) !important; }
+  .home-billboard::after {
+    background: linear-gradient(180deg, rgba(14, 35, 71, .96) 0%, rgba(20, 53, 101, .82) 34%, rgba(20, 70, 127, .18) 72%, rgba(17, 42, 81, 0) 100%) !important;
+  }
+  .category-card { box-shadow: 0 6px 15px rgba(29, 48, 80, .045) !important; }
+}
+
+/* A recognisable HeyMOM action colour: ultraviolet, not generic marketplace yellow. */
+:root { --heymom-electric: #6542d5; --heymom-electric-deep: #43268f; --heymom-glow: #f0a483; }
+html { background: #f5f1fb; }
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(720px 420px at -8% 12%, rgba(229, 178, 244, .34), transparent 68%),
+    radial-gradient(700px 440px at 108% 32%, rgba(137, 194, 251, .25), transparent 70%),
+    linear-gradient(112deg, #faf7ff 0%, #fffaf7 48%, #f5f9ff 100%) !important;
+}
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: linear-gradient(rgba(104, 73, 168, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(104, 73, 168, .035) 1px, transparent 1px);
+  background-size: 38px 38px;
+  content: "";
+  pointer-events: none;
+}
+
+/* The content remains clean; the margins get a deliberate, premium texture. */
+.catalog-shell,
+.product-page,
+.policy-page,
+.checkout-page { position: relative; }
+.home-billboard,
+.category-rail,
+.top-products,
+.store-policies,
+.product-page > *,
+.checkout-page > * { position: relative; z-index: 1; }
+
+.product-badge {
+  background: linear-gradient(135deg, #f4b59a, #ea8e71) !important;
+  color: #54281f !important;
+}
+
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(88, 49, 185, .92) !important;
+  background: linear-gradient(108deg, #43268f 0%, #6542d5 54%, #8155ec 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 12px 25px rgba(85, 49, 176, .27), inset 0 1px 0 rgba(255,255,255,.2) !important;
+}
+.home-billboard .home-hero-cta::after,
+.add-to-cart::after,
+.checkout-button::after,
+.detail-buy::after,
+.sticky-purchase > button::after,
+.bundle-offer footer button::after,
+.checkout-upsell-product button::after,
+.favorite-add-to-cart::after,
+.review-form button::after,
+.brand-spotlight-copy > button::after {
+  position: absolute;
+  top: -60%;
+  right: -14%;
+  width: 34%;
+  height: 220%;
+  background: linear-gradient(90deg, transparent, rgba(255, 216, 188, .44), transparent);
+  content: "";
+  transform: rotate(22deg);
+  transition: transform .35s ease;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #8357ef !important;
+  background: linear-gradient(108deg, #5130a8 0%, #7148e2 54%, #956cf4 100%) !important;
+  box-shadow: 0 16px 30px rgba(85, 49, 176, .35), inset 0 1px 0 rgba(255,255,255,.24) !important;
+}
+.home-billboard .home-hero-cta:hover::after,
+.add-to-cart:hover::after,
+.checkout-button:hover::after,
+.detail-buy:hover::after,
+.sticky-purchase > button:hover::after,
+.bundle-offer footer button:hover::after,
+.checkout-upsell-product button:hover::after,
+.favorite-add-to-cart:hover::after,
+.review-form button:hover::after,
+.brand-spotlight-copy > button:hover::after { transform: translateX(-245%) rotate(22deg); }
+.add-to-cart:disabled::after,
+.checkout-button:disabled::after { display: none; }
+
+/* Keep the callback visible but clearly secondary to a purchase action. */
+.product-site-header .callback-button,
+.mobile-callback-button {
+  border-color: #bca6e8 !important;
+  background: rgba(255,255,255,.7) !important;
+  color: #5738ad !important;
+}
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #f1ebff !important; color: #43268f !important; }
+
+@media (max-width: 800px) {
+  body { background: linear-gradient(145deg, #faf7ff, #fffaf7 55%, #f5f9ff) !important; }
+  body::before { background-size: 28px 28px; opacity: .55; }
+}
+
+/* Colour direction II — ocean blue + coral. No violet, no generic yellow. */
+:root { --heymom-electric: #087bc8; --heymom-electric-deep: #055494; --heymom-glow: #ff8e78; --blue: #087bc8; --blue-dark: #055494; }
+html { background: #f2f9ff; }
+body {
+  background:
+    radial-gradient(720px 440px at -7% 16%, rgba(109, 209, 233, .29), transparent 67%),
+    radial-gradient(730px 440px at 107% 35%, rgba(255, 180, 153, .25), transparent 70%),
+    linear-gradient(118deg, #f1faff 0%, #fffaf6 51%, #fff4ee 100%) !important;
+}
+body::before {
+  background-image: linear-gradient(rgba(21, 118, 170, .032) 1px, transparent 1px), linear-gradient(90deg, rgba(21, 118, 170, .032) 1px, transparent 1px);
+}
+.product-site-header .heymom-logo-word em,
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #ff786d, #f3ad76) !important; }
+.product-site-header .callback-button,
+.mobile-callback-button { border-color: #ffb4a6 !important; color: #d05d57 !important; }
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #fff0ec !important; color: #ae4945 !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #087bc8 !important;
+  background: linear-gradient(108deg, #055494 0%, #087bc8 54%, #16a8dc 100%) !important;
+  box-shadow: 0 12px 25px rgba(5, 105, 178, .27), inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #18a9dc !important;
+  background: linear-gradient(108deg, #0567ac 0%, #1297d2 54%, #2fc1e8 100%) !important;
+  box-shadow: 0 16px 30px rgba(5, 105, 178, .34), inset 0 1px 0 rgba(255,255,255,.25) !important;
+}
+.product-badge { background: linear-gradient(135deg, #ffc1ae, #ff937e) !important; color: #5d2723 !important; }
+.language-switcher button.active { background: #087bc8 !important; color: #fff !important; }
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f2faff, #fff9f5 57%, #fff2eb) !important; } }
+
+/* Current storefront palette — electric violet with warm rose light. */
+:root { --heymom-electric: #7537db; --heymom-electric-deep: #421b94; --heymom-glow: #ff9dba; --blue: #7537db; --blue-dark: #421b94; }
+html { background: #f7f2ff; }
+body {
+  background:
+    radial-gradient(720px 440px at -7% 16%, rgba(186, 131, 255, .28), transparent 67%),
+    radial-gradient(730px 440px at 107% 35%, rgba(255, 178, 204, .26), transparent 70%),
+    linear-gradient(118deg, #f7f3ff 0%, #fff9fc 51%, #fff3f8 100%) !important;
+}
+body::before { background-image: linear-gradient(rgba(111, 56, 205, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(111, 56, 205, .035) 1px, transparent 1px); }
+.product-site-header .heymom-logo-word em,
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #a342ed, #ef79aa) !important; }
+.product-site-header .callback-button,
+.mobile-callback-button { border-color: #c6abef !important; color: #6830c2 !important; }
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #f5efff !important; color: #421b94 !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #7537db !important;
+  background: linear-gradient(108deg, #421b94 0%, #7537db 53%, #a342ed 100%) !important;
+  box-shadow: 0 12px 25px rgba(101, 45, 190, .29), inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #a342ed !important;
+  background: linear-gradient(108deg, #5520b6 0%, #8947e6 53%, #bd67f5 100%) !important;
+  box-shadow: 0 16px 30px rgba(101, 45, 190, .36), inset 0 1px 0 rgba(255,255,255,.25) !important;
+}
+.language-switcher button.active { background: #7537db !important; }
+.product-badge { background: linear-gradient(135deg, #ffc0d2, #ef86aa) !important; color: #59233b !important; }
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f7f3ff, #fff9fc 57%, #fff1f7) !important; } }
+
+/* Palette 1/4 — confident navy: the clearest trust signal for medtech. */
+:root { --blue: #125ca8; --blue-dark: #0b315d; --heymom-electric: #125ca8; --heymom-electric-deep: #0b315d; --heymom-glow: #63c7df; }
+html { background: #f4f8fb; }
+body {
+  background:
+    radial-gradient(760px 430px at -8% 15%, rgba(135, 207, 231, .24), transparent 68%),
+    radial-gradient(710px 450px at 108% 35%, rgba(186, 216, 242, .26), transparent 70%),
+    linear-gradient(120deg, #f4f9fc 0%, #fffdfb 52%, #f5f8fc 100%) !important;
+}
+body::before { background-image: linear-gradient(rgba(17, 71, 123, .028) 1px, transparent 1px), linear-gradient(90deg, rgba(17, 71, 123, .028) 1px, transparent 1px); }
+.product-site-header .heymom-logo-word em,
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #167ab8, #5ec9de) !important; }
+.product-site-header .callback-button,
+.mobile-callback-button { border-color: #a8cfeb !important; color: #0d548e !important; }
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #edf7fd !important; color: #0b315d !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #0b315d !important;
+  background: linear-gradient(108deg, #0b315d 0%, #125ca8 54%, #238bc0 100%) !important;
+  box-shadow: 0 12px 25px rgba(11, 49, 93, .28), inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #238bc0 !important;
+  background: linear-gradient(108deg, #0e4279 0%, #176dbb 54%, #42a8d4 100%) !important;
+  box-shadow: 0 16px 30px rgba(11, 49, 93, .34), inset 0 1px 0 rgba(255,255,255,.25) !important;
+}
+.language-switcher button.active { background: #125ca8 !important; }
+.product-badge { background: linear-gradient(135deg, #d7eef5, #9bdaea) !important; color: #183d59 !important; }
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f4f9fc, #fffdfb 57%, #f2f8fc) !important; } }
+
+/* Palette 2/4 — fresh teal: care, cleanliness, a softer health signal. */
+:root { --blue: #078f91; --blue-dark: #075859; --heymom-electric: #078f91; --heymom-electric-deep: #075859; --heymom-glow: #a7e7d7; }
+html { background: #f1fbf8; }
+body {
+  background:
+    radial-gradient(760px 430px at -8% 15%, rgba(125, 224, 205, .26), transparent 68%),
+    radial-gradient(710px 450px at 108% 35%, rgba(216, 243, 198, .26), transparent 70%),
+    linear-gradient(120deg, #f1fbf8 0%, #fffefa 52%, #f6fcf8 100%) !important;
+}
+body::before { background-image: linear-gradient(rgba(7, 116, 112, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(7, 116, 112, .03) 1px, transparent 1px); }
+.product-site-header .heymom-logo-word em,
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #059d9a, #5dca9d) !important; }
+.product-site-header .callback-button,
+.mobile-callback-button { border-color: #a8ddd4 !important; color: #087473 !important; }
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #ebfaf6 !important; color: #075859 !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #075859 !important;
+  background: linear-gradient(108deg, #075859 0%, #078f91 54%, #1eaea0 100%) !important;
+  box-shadow: 0 12px 25px rgba(7, 105, 101, .27), inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #1eaea0 !important;
+  background: linear-gradient(108deg, #087170 0%, #10a39b 54%, #42c4a6 100%) !important;
+  box-shadow: 0 16px 30px rgba(7, 105, 101, .34), inset 0 1px 0 rgba(255,255,255,.25) !important;
+}
+.language-switcher button.active { background: #078f91 !important; }
+.product-badge { background: linear-gradient(135deg, #e1f7c9, #aee6b5) !important; color: #244c3d !important; }
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f1fbf8, #fffefa 57%, #f5fcf8) !important; } }
+
+/* Palette 3/4 — eucalyptus green: safety, warmth, natural care. */
+:root { --blue: #3f9472; --blue-dark: #236149; --heymom-electric: #3f9472; --heymom-electric-deep: #236149; --heymom-glow: #d5dca7; }
+html { background: #f7fbf3; }
+body {
+  background:
+    radial-gradient(760px 430px at -8% 15%, rgba(171, 216, 183, .29), transparent 68%),
+    radial-gradient(710px 450px at 108% 35%, rgba(248, 220, 180, .24), transparent 70%),
+    linear-gradient(120deg, #f5faf2 0%, #fffdf8 52%, #fbf7ef 100%) !important;
+}
+body::before { background-image: linear-gradient(rgba(58, 122, 85, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 122, 85, .03) 1px, transparent 1px); }
+.product-site-header .heymom-logo-word em,
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #4aa47a, #aec75e) !important; }
+.product-site-header .callback-button,
+.mobile-callback-button { border-color: #bbd8c1 !important; color: #367856 !important; }
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #f1f8ef !important; color: #236149 !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #236149 !important;
+  background: linear-gradient(108deg, #236149 0%, #3f9472 54%, #69ad73 100%) !important;
+  box-shadow: 0 12px 25px rgba(43, 108, 76, .26), inset 0 1px 0 rgba(255,255,255,.22) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #69ad73 !important;
+  background: linear-gradient(108deg, #2c7958 0%, #529d75 54%, #87bd78 100%) !important;
+  box-shadow: 0 16px 30px rgba(43, 108, 76, .33), inset 0 1px 0 rgba(255,255,255,.25) !important;
+}
+.language-switcher button.active { background: #3f9472 !important; }
+.product-badge { background: linear-gradient(135deg, #f3e7c9, #d8e9a7) !important; color: #3e4e2a !important; }
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f5faf2, #fffdf8 57%, #fbf6ed) !important; } }
+
+/* Palette 4/4 — white + graphite: restrained, premium, completely transparent. */
+:root { --blue: #30475e; --blue-dark: #1e2c38; --heymom-electric: #30475e; --heymom-electric-deep: #1e2c38; --heymom-glow: #d7e7ef; }
+html { background: #f6f8f9; }
+body {
+  background:
+    radial-gradient(760px 430px at -8% 15%, rgba(219, 235, 241, .4), transparent 68%),
+    radial-gradient(710px 450px at 108% 35%, rgba(231, 235, 238, .42), transparent 70%),
+    linear-gradient(120deg, #f7f9fa 0%, #fff 52%, #f5f7f8 100%) !important;
+}
+body::before { background-image: linear-gradient(rgba(45, 65, 80, .026) 1px, transparent 1px), linear-gradient(90deg, rgba(45, 65, 80, .026) 1px, transparent 1px); }
+.product-site-header .heymom-logo-word em,
+.site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #30475e, #7694a5) !important; }
+.product-site-header .callback-button,
+.mobile-callback-button { border-color: #bfccd4 !important; color: #30475e !important; }
+.product-site-header .callback-button:hover,
+.mobile-callback-button:hover { background: #f1f5f7 !important; color: #1e2c38 !important; }
+.home-billboard .home-hero-cta,
+body .home-billboard .home-hero-cta,
+.add-to-cart,
+.checkout-button,
+.detail-buy,
+.sticky-purchase > button,
+.bundle-offer footer button,
+.checkout-upsell-product button,
+.favorite-add-to-cart,
+.review-form button,
+.brand-spotlight-copy > button,
+body .product-card .add-to-cart,
+body .product-summary .detail-buy,
+body .checkout-page .checkout-button,
+body .cart-drawer .checkout-button {
+  border-color: #1e2c38 !important;
+  background: linear-gradient(108deg, #1e2c38 0%, #30475e 54%, #4b677a 100%) !important;
+  box-shadow: 0 12px 25px rgba(30, 44, 56, .26), inset 0 1px 0 rgba(255,255,255,.17) !important;
+}
+.home-billboard .home-hero-cta:hover,
+body .home-billboard .home-hero-cta:hover,
+.add-to-cart:hover,
+.checkout-button:hover,
+.detail-buy:hover,
+.sticky-purchase > button:hover,
+.bundle-offer footer button:hover,
+.checkout-upsell-product button:hover,
+.favorite-add-to-cart:hover,
+.review-form button:hover,
+.brand-spotlight-copy > button:hover {
+  border-color: #4b677a !important;
+  background: linear-gradient(108deg, #263a4b 0%, #3d5a6d 54%, #648394 100%) !important;
+  box-shadow: 0 16px 30px rgba(30, 44, 56, .33), inset 0 1px 0 rgba(255,255,255,.2) !important;
+}
+.language-switcher button.active { background: #30475e !important; }
+.product-badge { background: linear-gradient(135deg, #e8eef1, #c9d9e0) !important; color: #2d4757 !important; }
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f7f9fa, #fff 57%, #f4f6f7) !important; } }
+
+/* Neutral grey canvas: content stays white and therefore looks intentional. */
+html { background: #e9edf0; }
+body {
+  background:
+    radial-gradient(920px 520px at 50% -20%, rgba(255,255,255,.8), transparent 68%),
+    linear-gradient(135deg, #edf1f3 0%, #e5eaed 52%, #e9edef 100%) !important;
+}
+body::before {
+  background-image: linear-gradient(rgba(48, 71, 94, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(48, 71, 94, .025) 1px, transparent 1px);
+}
+@media (max-width:800px) { body { background: linear-gradient(145deg, #f0f3f4, #e5eaed 100%) !important; } }
+
+/* Dark storefront — scoped to public pages so the CMS keeps its own interface. */
+body:has(.product-site-header) {
+  color: #edf3f8 !important;
+  background:
+    radial-gradient(1000px 620px at -8% -10%, rgba(31, 119, 180, .24), transparent 66%),
+    radial-gradient(880px 580px at 109% 33%, rgba(111, 73, 175, .18), transparent 70%),
+    linear-gradient(135deg, #0b1017 0%, #111923 55%, #0b111a 100%) !important;
+}
+body:has(.product-site-header)::before {
+  background-image: linear-gradient(rgba(154, 189, 215, .027) 1px, transparent 1px), linear-gradient(90deg, rgba(154, 189, 215, .027) 1px, transparent 1px);
+}
+body:has(.product-site-header) .product-site-header {
+  background: rgba(11, 17, 25, .94) !important;
+  border-bottom-color: #273440 !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.28) !important;
+}
+body:has(.product-site-header) .product-site-header .product-nav { border-top-color: #25323e !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word b { color: #fff !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #48baff, #8d73ff) !important; }
+body:has(.product-site-header) .product-site-header .product-nav>a,
+body:has(.product-site-header) .product-contact,
+body:has(.product-site-header) .product-contact b,
+body:has(.product-site-header) .product-cart-link { color: #e9f1f8 !important; }
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #315269 !important;
+  background: #15293a !important;
+  color: #77c9ff !important;
+}
+body:has(.product-site-header) .product-site-header .callback-button,
+body:has(.product-site-header) .mobile-callback-button { border-color: #42657d !important; background: #121f2b !important; color: #a8d9f7 !important; }
+body:has(.product-site-header) .language-switcher { border-color: #30414e !important; background: #111b25 !important; }
+body:has(.product-site-header) .language-switcher button { color: #9dafbd !important; }
+body:has(.product-site-header) .language-switcher button.active { background: #176da9 !important; color: #fff !important; }
+
+body:has(.product-site-header) .catalog-shell,
+body:has(.product-site-header) .product-page,
+body:has(.product-site-header) .checkout-page { color: #e9f0f6 !important; }
+body:has(.product-site-header) .home-search-box,
+body:has(.product-site-header) .search {
+  border-color: #314453 !important;
+  background: #121c26 !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.2) !important;
+}
+body:has(.product-site-header) .home-search-box input,
+body:has(.product-site-header) .search input,
+body:has(.product-site-header) .home-search-box input::placeholder { color: #b7c4ce !important; background: transparent !important; }
+body:has(.product-site-header) .home-search-box svg { color: #71c9ff !important; }
+body:has(.product-site-header) .search-suggestions { border-color: #314453 !important; background: #14202b !important; box-shadow: 0 16px 34px rgba(0,0,0,.35) !important; }
+body:has(.product-site-header) .search-suggestions>a { color: #eef5f9 !important; }
+body:has(.product-site-header) .search-suggestions>a:hover { background: #1c2d3a !important; }
+
+body:has(.product-site-header) .home-billboard { box-shadow: 0 25px 62px rgba(0,0,0,.34) !important; }
+body:has(.product-site-header) .category-rail,
+body:has(.product-site-header) .product-page .product-summary,
+body:has(.product-site-header) .store-policies,
+body:has(.product-site-header) .checkout-panel,
+body:has(.product-site-header) .checkout-summary {
+  border-color: #2a3a47 !important;
+  background: linear-gradient(145deg, #14202b 0%, #101922 100%) !important;
+  box-shadow: 0 16px 34px rgba(0,0,0,.16) !important;
+}
+body:has(.product-site-header) .rail-heading h2,
+body:has(.product-site-header) .top-products-head h2,
+body:has(.product-site-header) .results-heading h1,
+body:has(.product-site-header) .product-summary h1,
+body:has(.product-site-header) .product-page h2,
+body:has(.product-site-header) .product-page h3 { color: #f4f8fb !important; }
+body:has(.product-site-header) .rail-heading>span,
+body:has(.product-site-header) .results-heading p,
+body:has(.product-site-header) .product-description p,
+body:has(.product-site-header) .breadcrumbs { color: #9eaebb !important; }
+body:has(.product-site-header) .category-card {
+  border-color: #2b3c49 !important;
+  background: linear-gradient(145deg, #18242f 0%, #111a23 100%) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2) !important;
+}
+body:has(.product-site-header) .category-card span { color: #eef5f8 !important; }
+body:has(.product-site-header) .category-card:hover { border-color: #4d87a9 !important; box-shadow: 0 16px 30px rgba(0,0,0,.32) !important; }
+body:has(.product-site-header) .filters { border-color: #293a47 !important; background: #131e28 !important; }
+body:has(.product-site-header) .filters-title,
+body:has(.product-site-header) .filters>button:not(.filters-close) { border-bottom-color: #293a47 !important; color: #dce8ee !important; }
+body:has(.product-site-header) .filters>button:not(.filters-close):hover,
+body:has(.product-site-header) .filters>button.selected { background: #1a2a37 !important; color: #78caff !important; }
+body:has(.product-site-header) .sort-control,
+body:has(.product-site-header) .sort-control select,
+body:has(.product-site-header) .mobile-filter-button { color: #dce8ee !important; }
+body:has(.product-site-header) .sort-control select,
+body:has(.product-site-header) .mobile-filter-button { border-color: #314453 !important; background: #14202b !important; }
+
+body:has(.product-site-header) .product-card h2 a { color: #edf4f8 !important; }
+body:has(.product-site-header) .product-image-wrap { border-color: #2b3a46 !important; background: #f8fafb !important; }
+body:has(.product-site-header) .product-card:hover .product-image-wrap { border-color: #64b2e3 !important; }
+body:has(.product-site-header) .product-details,
+body:has(.product-site-header) .product-review-count,
+body:has(.product-site-header) .price-row s,
+body:has(.product-site-header) .detail-price s { color: #9eafb9 !important; }
+body:has(.product-site-header) .price-row strong,
+body:has(.product-site-header) .detail-price strong { color: #69c5ff !important; }
+body:has(.product-site-header) .card-favorite { border-color: #344755 !important; background: #17222c !important; color: #c5d5df !important; }
+
+body:has(.product-site-header) .product-gallery,
+body:has(.product-site-header) .product-tabs,
+body:has(.product-site-header) .product-tabs button,
+body:has(.product-site-header) .product-tabs section,
+body:has(.product-site-header) .description-content,
+body:has(.product-site-header) .product-tabs p { color: #dce6ec !important; }
+body:has(.product-site-header) .product-gallery img { border-color: #2b3a46 !important; background: #f8fafb !important; }
+body:has(.product-site-header) .product-tabs { border-color: #2b3a46 !important; }
+body:has(.product-site-header) .product-tabs button { border-color: transparent !important; }
+body:has(.product-site-header) .product-tabs button.active { color: #6fcaff !important; border-bottom-color: #6fcaff !important; }
+body:has(.product-site-header) .site-footer { background: linear-gradient(120deg, #080d13, #111e29 60%, #15364c) !important; }
+body:has(.product-site-header) .site-footer p,
+body:has(.product-site-header) .site-footer nav span,
+body:has(.product-site-header) .site-footer nav a,
+body:has(.product-site-header) .site-footer-bottom { color: #a9bbc6 !important; }
+
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: linear-gradient(145deg, #0b1017, #121c27 55%, #0b111a) !important; }
+  body:has(.product-site-header) .product-site-header { background: #0c131b !important; }
+}
+
+/* Keep the conversion blocks readable against the dark surface. */
+body:has(.product-site-header) .product-summary-lead {
+  border-color: #417da3 !important;
+  background: linear-gradient(135deg, #1b2a36, #16222c) !important;
+  color: #d7e5ee !important;
+}
+body:has(.product-site-header) .product-summary-lead p { color: #d7e5ee !important; }
+body:has(.product-site-header) .product-summary-lead a { color: #75caff !important; }
+body:has(.product-site-header) .store-policies .policy-tabs button {
+  background: transparent !important;
+  color: #aebec9 !important;
+}
+body:has(.product-site-header) .store-policies .policy-tabs button.active,
+body:has(.product-site-header) .store-policies .policy-tabs button:hover { color: #77c9ff !important; }
+body:has(.product-site-header) .product-contact,
+body:has(.product-site-header) .product-contact b,
+body:has(.product-site-header) .product-contact span { color: #d6e4ec !important; opacity: 1 !important; }
+
+/* Light medical premium — public storefront only. */
+body:has(.product-site-header) {
+  color: #162b3b !important;
+  background:
+    radial-gradient(900px 520px at -5% 4%, rgba(113, 92, 211, .09), transparent 68%),
+    radial-gradient(760px 520px at 105% 21%, rgba(19, 141, 209, .10), transparent 70%),
+    #f5f8fb !important;
+}
+body:has(.product-site-header)::before { opacity: .38; }
+body:has(.product-site-header) .product-site-header {
+  background: rgba(255, 255, 255, .94) !important;
+  border-bottom-color: #dfe8ef !important;
+  box-shadow: 0 8px 24px rgba(24, 54, 77, .06) !important;
+}
+body:has(.product-site-header) .product-site-header .product-nav { border-top-color: #e5edf3 !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word b { color: #173c81 !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #168ed1, #765bd0) !important; }
+body:has(.product-site-header) .product-site-header .product-nav>a,
+body:has(.product-site-header) .product-contact,
+body:has(.product-site-header) .product-contact b,
+body:has(.product-site-header) .product-contact span,
+body:has(.product-site-header) .product-cart-link { color: #183344 !important; }
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #b8dced !important;
+  background: #eef8fe !important;
+  color: #087fc2 !important;
+}
+body:has(.product-site-header) .product-site-header .callback-button,
+body:has(.product-site-header) .mobile-callback-button {
+  border-color: #168ed1 !important;
+  background: #fff !important;
+  color: #087fc2 !important;
+}
+body:has(.product-site-header) .language-switcher { border-color: #d8e4eb !important; background: #fff !important; }
+body:has(.product-site-header) .language-switcher button { color: #6f8190 !important; }
+body:has(.product-site-header) .language-switcher button.active { background: #168ed1 !important; color: #fff !important; }
+
+body:has(.product-site-header) .catalog-shell,
+body:has(.product-site-header) .product-page,
+body:has(.product-site-header) .checkout-page { color: #162b3b !important; }
+body:has(.product-site-header) .home-search-box,
+body:has(.product-site-header) .search {
+  border-color: #c7dde9 !important;
+  background: #fff !important;
+  box-shadow: 0 10px 24px rgba(30, 92, 126, .08) !important;
+}
+body:has(.product-site-header) .home-search-box input,
+body:has(.product-site-header) .search input,
+body:has(.product-site-header) .home-search-box input::placeholder { color: #607584 !important; background: transparent !important; }
+body:has(.product-site-header) .home-search-box svg { color: #168ed1 !important; }
+body:has(.product-site-header) .search-suggestions { border-color: #d7e5ed !important; background: #fff !important; box-shadow: 0 16px 34px rgba(24,54,77,.14) !important; }
+body:has(.product-site-header) .search-suggestions>a { color: #183344 !important; }
+body:has(.product-site-header) .search-suggestions>a:hover { background: #f0f8fc !important; }
+
+body:has(.product-site-header) .category-rail,
+body:has(.product-site-header) .product-page .product-summary,
+body:has(.product-site-header) .store-policies,
+body:has(.product-site-header) .checkout-panel,
+body:has(.product-site-header) .checkout-summary {
+  border-color: #d8e6ee !important;
+  background: linear-gradient(145deg, #fff 0%, #f9fcff 100%) !important;
+  box-shadow: 0 16px 34px rgba(29, 73, 100, .08) !important;
+}
+body:has(.product-site-header) .rail-heading h2,
+body:has(.product-site-header) .top-products-head h2,
+body:has(.product-site-header) .results-heading h1,
+body:has(.product-site-header) .product-summary h1,
+body:has(.product-site-header) .product-page h2,
+body:has(.product-site-header) .product-page h3 { color: #162b3b !important; }
+body:has(.product-site-header) .rail-heading>span,
+body:has(.product-site-header) .results-heading p,
+body:has(.product-site-header) .product-description p,
+body:has(.product-site-header) .breadcrumbs { color: #66808f !important; }
+body:has(.product-site-header) .category-card {
+  border-color: #d5e5ee !important;
+  background: linear-gradient(145deg, #fff 0%, #f4fbff 100%) !important;
+  box-shadow: 0 8px 20px rgba(30, 92, 126, .07) !important;
+}
+body:has(.product-site-header) .category-card span { color: #1c3545 !important; }
+body:has(.product-site-header) .category-card:hover { border-color: #8fcef0 !important; box-shadow: 0 16px 30px rgba(31, 122, 175, .13) !important; }
+body:has(.product-site-header) .filters { border-color: #d9e6ed !important; background: #fff !important; }
+body:has(.product-site-header) .filters-title,
+body:has(.product-site-header) .filters>button:not(.filters-close) { border-bottom-color: #e2ebf0 !important; color: #405969 !important; }
+body:has(.product-site-header) .filters>button:not(.filters-close):hover,
+body:has(.product-site-header) .filters>button.selected { background: #f0f8fd !important; color: #087fc2 !important; }
+body:has(.product-site-header) .sort-control,
+body:has(.product-site-header) .sort-control select,
+body:has(.product-site-header) .mobile-filter-button { color: #405969 !important; }
+body:has(.product-site-header) .sort-control select,
+body:has(.product-site-header) .mobile-filter-button { border-color: #cbdde7 !important; background: #fff !important; }
+
+body:has(.product-site-header) .product-card h2 a { color: #193445 !important; }
+body:has(.product-site-header) .product-image-wrap { border-color: #e0e9ef !important; background: #fff !important; }
+body:has(.product-site-header) .product-card:hover .product-image-wrap { border-color: #75bee9 !important; }
+body:has(.product-site-header) .product-details,
+body:has(.product-site-header) .product-review-count,
+body:has(.product-site-header) .price-row s,
+body:has(.product-site-header) .detail-price s { color: #7a8d99 !important; }
+body:has(.product-site-header) .price-row strong,
+body:has(.product-site-header) .detail-price strong { color: #087fc2 !important; }
+body:has(.product-site-header) .card-favorite { border-color: #d6e4eb !important; background: #fff !important; color: #5c7180 !important; }
+
+body:has(.product-site-header) .product-gallery,
+body:has(.product-site-header) .product-tabs,
+body:has(.product-site-header) .product-tabs button,
+body:has(.product-site-header) .product-tabs section,
+body:has(.product-site-header) .description-content,
+body:has(.product-site-header) .product-tabs p { color: #385161 !important; }
+body:has(.product-site-header) .product-gallery img { border-color: #dce7ee !important; background: #fff !important; }
+body:has(.product-site-header) .product-tabs { border-color: #dce7ee !important; }
+body:has(.product-site-header) .product-tabs button.active { color: #087fc2 !important; border-bottom-color: #087fc2 !important; }
+body:has(.product-site-header) .product-summary-lead {
+  border-color: #7fc8ec !important;
+  background: linear-gradient(135deg, #edf8fe, #f7f5ff) !important;
+  color: #486270 !important;
+}
+body:has(.product-site-header) .product-summary-lead p { color: #486270 !important; }
+body:has(.product-site-header) .product-summary-lead a { color: #087fc2 !important; }
+body:has(.product-site-header) .store-policies .policy-tabs button { background: transparent !important; color: #708391 !important; }
+body:has(.product-site-header) .store-policies .policy-tabs button.active,
+body:has(.product-site-header) .store-policies .policy-tabs button:hover { color: #087fc2 !important; }
+body:has(.product-site-header) .site-footer { background: linear-gradient(120deg, #122a42, #183e60 60%, #34508a) !important; }
+body:has(.product-site-header) .site-footer p,
+body:has(.product-site-header) .site-footer nav span,
+body:has(.product-site-header) .site-footer nav a,
+body:has(.product-site-header) .site-footer-bottom { color: #c7d7e3 !important; }
+
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #f5f8fb !important; }
+  body:has(.product-site-header) .product-site-header { background: rgba(255,255,255,.98) !important; }
+}
+
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .bundle-offer footer button,
+body:has(.product-site-header) .checkout-upsell-product button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #078fdd, #426fce) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 21px rgba(19, 115, 190, .24) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .bundle-offer footer button:hover,
+body:has(.product-site-header) .checkout-upsell-product button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, #0877c0, #5d4ec5) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active { background: #168ed1 !important; }
+
+/* Warm peach canvas: friendly for families, while white surfaces retain the medical clarity. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(860px 510px at -6% 5%, rgba(255, 180, 135, .20), transparent 68%),
+    radial-gradient(760px 520px at 106% 24%, rgba(247, 154, 125, .16), transparent 70%),
+    linear-gradient(145deg, #fff8f3 0%, #fff2ea 54%, #fff8f5 100%) !important;
+}
+body:has(.product-site-header) .category-rail,
+body:has(.product-site-header) .product-page .product-summary,
+body:has(.product-site-header) .store-policies,
+body:has(.product-site-header) .checkout-panel,
+body:has(.product-site-header) .checkout-summary { box-shadow: 0 16px 34px rgba(147, 81, 55, .09) !important; }
+body:has(.product-site-header) .category-card { box-shadow: 0 8px 20px rgba(147, 81, 55, .075) !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #fff5ef !important; }
+}
+
+/* Violet is secondary: it marks discovery and offers, never competes with the buy action. */
+body:has(.product-site-header) .eyebrow,
+body:has(.product-site-header) .rail-heading .eyebrow,
+body:has(.product-site-header) .category-card small { color: #7155c7 !important; }
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #d8c9f6 !important;
+  background: #f7f2ff !important;
+  color: #6848bd !important;
+}
+body:has(.product-site-header) .category-card {
+  border-color: #e2d9f4 !important;
+  background: linear-gradient(145deg, #fff 0%, #fcfaff 100%) !important;
+}
+body:has(.product-site-header) .category-card:hover {
+  border-color: #ad95e8 !important;
+  box-shadow: 0 16px 30px rgba(105, 72, 188, .15) !important;
+}
+body:has(.product-site-header) .filters>button:not(.filters-close):hover,
+body:has(.product-site-header) .filters>button.selected {
+  background: #f7f2ff !important;
+  color: #6848bd !important;
+}
+body:has(.product-site-header) .pagination .active,
+body:has(.product-site-header) .pagination button:hover {
+  border-color: #7155c7 !important;
+  background: #7155c7 !important;
+  color: #fff !important;
+}
+body:has(.product-site-header) .product-badge {
+  background: linear-gradient(135deg, #eee7ff, #d9cdf8) !important;
+  color: #4f328d !important;
+  border-color: rgba(96, 67, 169, .15) !important;
+  box-shadow: 0 6px 15px rgba(105, 72, 188, .13) !important;
+}
+body:has(.product-site-header) .bundle-offer,
+body:has(.product-site-header) .bundle-carousel-offer,
+body:has(.product-site-header) .bundle-variants-offer { border-color: #dfd3f6 !important; }
+body:has(.product-site-header) .bundle-offer .bundle-heading h2,
+body:has(.product-site-header) .bundle-carousel-head h2,
+body:has(.product-site-header) .bundle-variants-offer .bundle-heading h2 { color: #4f328d !important; }
+body:has(.product-site-header) .bundle-offer footer button,
+body:has(.product-site-header) .bundle-carousel-offer footer button {
+  background: linear-gradient(135deg, #7658ce, #a05bcf) !important;
+  box-shadow: 0 10px 21px rgba(105, 72, 188, .22) !important;
+}
+body:has(.product-site-header) .bundle-offer footer button:hover,
+body:has(.product-site-header) .bundle-carousel-offer footer button:hover { background: linear-gradient(135deg, #6244b5, #8647b7) !important; }
+
+/* Background option 1 — soft lavender. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(860px 510px at -6% 5%, rgba(173, 142, 238, .16), transparent 68%),
+    radial-gradient(760px 520px at 106% 24%, rgba(132, 193, 238, .13), transparent 70%),
+    linear-gradient(145deg, #faf8ff 0%, #f5f0ff 54%, #fbf9ff 100%) !important;
+}
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #f7f3ff !important; }
+}
+
+/* Background option 2 — warm milk cream. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(860px 510px at -6% 5%, rgba(248, 212, 157, .16), transparent 68%),
+    radial-gradient(760px 520px at 106% 24%, rgba(225, 191, 255, .10), transparent 70%),
+    linear-gradient(145deg, #fffefa 0%, #fffaf1 54%, #fffdf8 100%) !important;
+}
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #fffaf3 !important; }
+}
+
+/* Background option 3 — pale mint-blue. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(860px 510px at -6% 5%, rgba(125, 216, 202, .17), transparent 68%),
+    radial-gradient(760px 520px at 106% 24%, rgba(123, 186, 239, .13), transparent 70%),
+    linear-gradient(145deg, #f7fffd 0%, #edf9f7 54%, #f7fcff 100%) !important;
+}
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #f1fbf9 !important; }
+}
+
+/* Background option 4 — pale premium sand. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(860px 510px at -6% 5%, rgba(230, 193, 140, .17), transparent 68%),
+    radial-gradient(760px 520px at 106% 24%, rgba(196, 162, 232, .11), transparent 70%),
+    linear-gradient(145deg, #fdfaf5 0%, #f8f1e8 54%, #fdfbf7 100%) !important;
+}
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #faf4ec !important; }
+}
+
+/* Chosen palette — powder blue, trusted blue actions, apricot sale accents. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(900px 540px at -6% 5%, rgba(153, 211, 239, .22), transparent 68%),
+    radial-gradient(720px 500px at 106% 24%, rgba(241, 173, 131, .15), transparent 70%),
+    linear-gradient(145deg, #f7fbfe 0%, #eef7fc 54%, #f8fbfd 100%) !important;
+}
+body:has(.product-site-header) .product-badge {
+  background: linear-gradient(135deg, #ffd5bf, #f2ac82) !important;
+  color: #5a3023 !important;
+  border-color: rgba(149, 76, 47, .14) !important;
+  box-shadow: 0 6px 15px rgba(190, 104, 66, .15) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active { background: #f1ad83 !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #f2f9fd !important; }
+}
+
+/* Palette 2 — warm white, premium indigo and soft lavender. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(880px 520px at -6% 5%, rgba(225, 210, 248, .18), transparent 68%),
+    radial-gradient(720px 500px at 106% 24%, rgba(248, 222, 188, .13), transparent 70%),
+    linear-gradient(145deg, #fffefa 0%, #fffcf7 54%, #fffdf9 100%) !important;
+}
+body:has(.product-site-header) .product-site-header .heymom-logo-word b { color: #253e77 !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #5d4bad, #9a7bd1) !important; }
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #d9cff2 !important;
+  background: #f7f3ff !important;
+  color: #6c54ae !important;
+}
+body:has(.product-site-header) .language-switcher button.active { background: #253e77 !important; }
+body:has(.product-site-header) .eyebrow,
+body:has(.product-site-header) .rail-heading .eyebrow,
+body:has(.product-site-header) .category-card small { color: #8066bf !important; }
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #253e77, #3c5a99) !important;
+  box-shadow: 0 10px 21px rgba(37, 62, 119, .23) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover { background: linear-gradient(135deg, #1d315f, #324d84) !important; }
+body:has(.product-site-header) .product-badge {
+  background: linear-gradient(135deg, #eee8fc, #d9cdf3) !important;
+  color: #503c84 !important;
+  border-color: rgba(102, 78, 170, .14) !important;
+  box-shadow: 0 6px 15px rgba(105, 72, 188, .12) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active { background: #8b70c9 !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #fffcf8 !important; }
+}
+
+/* Palette 3 — calm sage, teal actions and a gentle coral signal. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(880px 520px at -6% 5%, rgba(153, 213, 187, .18), transparent 68%),
+    radial-gradient(720px 500px at 106% 24%, rgba(239, 156, 128, .13), transparent 70%),
+    linear-gradient(145deg, #f8fdf9 0%, #f1f8f3 54%, #f9fcfa 100%) !important;
+}
+body:has(.product-site-header) .product-site-header .heymom-logo-word b { color: #176e70 !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #168c88, #58ad91) !important; }
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #bce5dc !important;
+  background: #effaf6 !important;
+  color: #147b78 !important;
+}
+body:has(.product-site-header) .language-switcher button.active { background: #168c88 !important; }
+body:has(.product-site-header) .eyebrow,
+body:has(.product-site-header) .rail-heading .eyebrow,
+body:has(.product-site-header) .category-card small { color: #168c88 !important; }
+body:has(.product-site-header) .category-card {
+  border-color: #d3e9df !important;
+  background: linear-gradient(145deg, #fff 0%, #f7fcf9 100%) !important;
+}
+body:has(.product-site-header) .category-card:hover {
+  border-color: #8fcebc !important;
+  box-shadow: 0 16px 30px rgba(35, 133, 113, .14) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #168c88, #3b9f8b) !important;
+  box-shadow: 0 10px 21px rgba(22, 140, 136, .23) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover { background: linear-gradient(135deg, #10736f, #2d8877) !important; }
+body:has(.product-site-header) .product-badge {
+  background: linear-gradient(135deg, #ffd0c5, #ed9b7e) !important;
+  color: #5b3028 !important;
+  border-color: rgba(167, 79, 58, .14) !important;
+  box-shadow: 0 6px 15px rgba(191, 104, 79, .14) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active { background: #ef9c80 !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #f2f9f4 !important; }
+}
+
+/* Palette 4 — powder blush with confident blue. */
+body:has(.product-site-header) {
+  background:
+    radial-gradient(900px 540px at -6% 5%, rgba(249, 192, 205, .20), transparent 68%),
+    radial-gradient(720px 500px at 106% 24%, rgba(175, 201, 245, .14), transparent 70%),
+    linear-gradient(145deg, #fffafb 0%, #fff2f5 54%, #fdfaff 100%) !important;
+}
+body:has(.product-site-header) .product-site-header .heymom-logo-word b { color: #244b92 !important; }
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em { background-image: linear-gradient(105deg, #247dc8, #7354c2) !important; }
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #c5d8f3 !important;
+  background: #f2f7ff !important;
+  color: #2867b5 !important;
+}
+body:has(.product-site-header) .language-switcher button.active { background: #2867b5 !important; }
+body:has(.product-site-header) .eyebrow,
+body:has(.product-site-header) .rail-heading .eyebrow,
+body:has(.product-site-header) .category-card small { color: #7155c7 !important; }
+body:has(.product-site-header) .category-card {
+  border-color: #ecd9e3 !important;
+  background: linear-gradient(145deg, #fff 0%, #fff9fb 100%) !important;
+}
+body:has(.product-site-header) .category-card:hover {
+  border-color: #d5a0b5 !important;
+  box-shadow: 0 16px 30px rgba(176, 96, 128, .14) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #247dc8, #3e5eb5) !important;
+  box-shadow: 0 10px 21px rgba(36, 99, 184, .22) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover { background: linear-gradient(135deg, #1767ad, #314b9a) !important; }
+body:has(.product-site-header) .product-badge {
+  background: linear-gradient(135deg, #ffd8e2, #ef9db6) !important;
+  color: #653144 !important;
+  border-color: rgba(154, 72, 98, .14) !important;
+  box-shadow: 0 6px 15px rgba(186, 97, 130, .14) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active { background: #8c6ed1 !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #fff5f7 !important; }
+}
+
+/* Reset after the colour experiments: calm, neutral storefront base. */
+body:has(.product-site-header) {
+  background: linear-gradient(145deg, #fafbfd 0%, #f4f7fa 52%, #fafbfd 100%) !important;
+}
+body:has(.product-site-header) .product-site-header .heymom-logo-word b {
+  color: #193e7a !important;
+}
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em {
+  background-image: linear-gradient(105deg, #168ed1, #5277d0) !important;
+}
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #c4dfef !important;
+  background: #eff8fd !important;
+  color: #0b7fc0 !important;
+}
+body:has(.product-site-header) .language-switcher button.active { background: #168ed1 !important; }
+body:has(.product-site-header) .eyebrow,
+body:has(.product-site-header) .rail-heading .eyebrow,
+body:has(.product-site-header) .category-card small { color: #087fc2 !important; }
+body:has(.product-site-header) .category-card {
+  border-color: #dce8ef !important;
+  background: #fff !important;
+  box-shadow: 0 8px 20px rgba(37, 68, 86, .06) !important;
+}
+body:has(.product-site-header) .category-card:hover {
+  border-color: #91ccea !important;
+  box-shadow: 0 16px 30px rgba(37, 103, 144, .12) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #078fdd, #356cca) !important;
+  box-shadow: 0 10px 21px rgba(36, 103, 184, .22) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, #0579bc, #2855ac) !important;
+}
+body:has(.product-site-header) .product-badge {
+  background: #eaf4ff !important;
+  color: #245d91 !important;
+  border-color: #cde3f5 !important;
+  box-shadow: 0 6px 15px rgba(64, 128, 179, .10) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active { background: #168ed1 !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) { background: #f7f9fb !important; }
+}
+
+/* Brand contrast: deep violet for navigation, warm orange for actions. */
+body:has(.product-site-header) .product-site-header .heymom-logo-word b {
+  color: #2b185d !important;
+}
+body:has(.product-site-header) .product-site-header .heymom-logo-word em,
+body:has(.product-site-header) .site-footer .heymom-logo-word em {
+  background-image: linear-gradient(105deg, #4b238c, #873bc7) !important;
+}
+
+/* A subtle violet lily sits to the right of the wordmark. */
+body:has(.product-site-header) .heymom-logo { gap:0 !important; }
+body:has(.product-site-header) .heymom-logo-mark { display:inline-flex;flex:0 0 auto;width:22px;height:14px;align-items:center;justify-content:center;color:#6d35aa; }
+body:has(.product-site-header) .heymom-logo-mark svg { display:block;width:100%;height:100%;overflow:visible; }
+body:has(.product-site-header) .heymom-logo-mark img { display:block;width:100%;height:100%;object-fit:contain; }
+body:has(.product-site-header) .heymom-logo-flower-petal { fill:#c9a0ea; }
+body:has(.product-site-header) .heymom-logo-flower-center { fill:#8350ad; }
+body:has(.product-site-header) .heymom-logo-leaf-shape { fill:#49b621; }
+body:has(.product-site-header) .heymom-logo-leaf-midrib { fill:none;stroke:#88dc41;stroke-width:1.75px;stroke-linecap:round; }
+body:has(.product-site-header) .heymom-logo-leaf-veins { fill:none;stroke:#82d845;stroke-width:.78px;stroke-linecap:round;stroke-linejoin:round;opacity:.92; }
+body:has(.product-site-header) .heymom-logo-butterfly-wing-left-top { fill:#5f2cab; }
+body:has(.product-site-header) .heymom-logo-butterfly-wing-right-top { fill:#8e52ca; }
+body:has(.product-site-header) .heymom-logo-butterfly-wing-left-bottom { fill:#9f63d5; }
+body:has(.product-site-header) .heymom-logo-butterfly-wing-right-bottom { fill:#c393f0; }
+body:has(.product-site-header) .heymom-logo-butterfly-body { fill:#3c176a; }
+body:has(.product-site-header) .heymom-logo-butterfly-antennae { fill:none;stroke:#6a31af;stroke-width:1.45px;stroke-linecap:round; }
+body:has(.product-site-header) .site-footer .heymom-logo-butterfly-wing-left-top { fill:#fff; }
+body:has(.product-site-header) .site-footer .heymom-logo-butterfly-wing-right-top { fill:#d7b8ff; }
+body:has(.product-site-header) .site-footer .heymom-logo-butterfly-wing-left-bottom { fill:#cda5ff; }
+body:has(.product-site-header) .site-footer .heymom-logo-butterfly-wing-right-bottom { fill:#f0e4ff; }
+body:has(.product-site-header) .site-footer .heymom-logo-butterfly-body { fill:#fff; }
+body:has(.product-site-header) .site-footer .heymom-logo-butterfly-antennae { stroke:#fff; }
+body:has(.product-site-header) .site-footer .heymom-logo-flower-petal { fill:#e3cef7; }
+body:has(.product-site-header) .site-footer .heymom-logo-flower-center { fill:#fff; }
+body:has(.product-site-header) .site-footer .heymom-logo-leaf-shape { fill:#86c96d; }
+body:has(.product-site-header) .site-footer .heymom-logo-leaf-midrib { stroke:#c3ed9e; }
+body:has(.product-site-header) .site-footer .heymom-logo-leaf-veins { stroke:#c9efa8; }
+@media(max-width:800px){body:has(.product-site-header) .product-site-header .heymom-logo-mark{width:19px;height:13px}body:has(.product-site-header) .heymom-logo{gap:0!important}}
+body:has(.product-site-header) .product-site-header .category-trigger,
+body:has(.product-site-header) .catalog-trigger {
+  border-color: #d9c9ee !important;
+  background: #f6f1fc !important;
+  color: #4d2589 !important;
+}
+body:has(.product-site-header) .product-site-header .nav-links a,
+body:has(.product-site-header) .product-site-header .header-phone,
+body:has(.product-site-header) .product-site-header .favorites-trigger,
+body:has(.product-site-header) .product-site-header .cart-trigger {
+  color: #302050 !important;
+}
+body:has(.product-site-header) .language-switcher button.active { background: #4d2589 !important; }
+body:has(.product-site-header) .eyebrow,
+body:has(.product-site-header) .rail-heading .eyebrow,
+body:has(.product-site-header) .category-card small { color: #612aaa !important; }
+body:has(.product-site-header) .category-card:hover {
+  border-color: #bf9ce1 !important;
+  box-shadow: 0 16px 30px rgba(89, 42, 148, .14) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #ff8a1e, #ed5a24) !important;
+  color: #2c1847 !important;
+  box-shadow: 0 10px 22px rgba(220, 91, 29, .24) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, #ff9f32, #e94f1c) !important;
+}
+body:has(.product-site-header) .product-badge {
+  background: #fff0d9 !important;
+  color: #a33b15 !important;
+  border-color: #ffd3a4 !important;
+  box-shadow: 0 6px 15px rgba(218, 102, 35, .12) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active {
+  background: #ff7d1b !important;
+}
+
+/* Action colour variant: electric turquoise against the violet identity. */
+body:has(.product-site-header) .home-billboard .home-hero-cta,
+body:has(.product-site-header) .add-to-cart,
+body:has(.product-site-header) .checkout-button,
+body:has(.product-site-header) .detail-buy,
+body:has(.product-site-header) .sticky-purchase > button,
+body:has(.product-site-header) .quick-order-trigger,
+body:has(.product-site-header) .callback-submit,
+body:has(.product-site-header) .favorite-add-to-cart,
+body:has(.product-site-header) .review-form button,
+body:has(.product-site-header) .brand-spotlight-copy > button {
+  background: linear-gradient(135deg, #21d8cf, #0aa3c8) !important;
+  color: #182448 !important;
+  box-shadow: 0 10px 22px rgba(8, 161, 190, .25) !important;
+}
+body:has(.product-site-header) .home-billboard .home-hero-cta:hover,
+body:has(.product-site-header) .add-to-cart:hover,
+body:has(.product-site-header) .checkout-button:hover,
+body:has(.product-site-header) .detail-buy:hover,
+body:has(.product-site-header) .sticky-purchase > button:hover,
+body:has(.product-site-header) .quick-order-trigger:hover,
+body:has(.product-site-header) .callback-submit:hover,
+body:has(.product-site-header) .favorite-add-to-cart:hover,
+body:has(.product-site-header) .review-form button:hover,
+body:has(.product-site-header) .brand-spotlight-copy > button:hover {
+  background: linear-gradient(135deg, #40e6d7, #078cb6) !important;
+}
+body:has(.product-site-header) .home-billboard-controls > div button.active {
+  background: #16c4c2 !important;
+}
+
+/* Billboard surface follows the violet + turquoise system. */
+body:has(.product-site-header) .home-billboard {
+  border-color: #3d2674 !important;
+  background: #27154f !important;
+  box-shadow: 0 23px 50px rgba(44, 22, 86, .22) !important;
+}
+body:has(.product-site-header) .home-billboard::before {
+  background: radial-gradient(circle, rgba(22, 196, 194, .28), rgba(22, 196, 194, 0) 68%) !important;
+}
+body:has(.product-site-header) .home-billboard::after {
+  background: linear-gradient(92deg, rgba(35, 18, 74, .98) 0%, rgba(54, 27, 107, .95) 37%, rgba(78, 39, 143, .56) 59%, rgba(34, 17, 74, .08) 83%) !important;
+}
+body:has(.product-site-header) .home-billboard-content .eyebrow { color: #55eee1 !important; }
+body:has(.product-site-header) .home-billboard-content h1 { color: #fff !important; }
+body:has(.product-site-header) .home-billboard-content p { color: #e5dcf4 !important; }
+body:has(.product-site-header) .home-billboard-controls > div button { background: rgba(255, 255, 255, .48) !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) .home-billboard::after {
+    background: linear-gradient(180deg, rgba(35, 18, 74, .98) 0%, rgba(54, 27, 107, .91) 38%, rgba(70, 35, 129, .28) 76%, rgba(35, 18, 74, .06) 100%) !important;
+  }
+}
+
+/* Softer billboard: muted plum rather than saturated violet. */
+body:has(.product-site-header) .home-billboard {
+  border-color: #5a5870 !important;
+  background: #383746 !important;
+  box-shadow: 0 23px 50px rgba(42, 41, 57, .19) !important;
+}
+body:has(.product-site-header) .home-billboard::before {
+  background: radial-gradient(circle, rgba(117, 196, 205, .16), rgba(117, 196, 205, 0) 68%) !important;
+}
+body:has(.product-site-header) .home-billboard::after {
+  background: linear-gradient(92deg, rgba(48, 47, 62, .98) 0%, rgba(63, 61, 82, .94) 39%, rgba(83, 79, 106, .49) 61%, rgba(48, 47, 62, .07) 84%) !important;
+}
+body:has(.product-site-header) .home-billboard-content .eyebrow { color: #94e1db !important; }
+body:has(.product-site-header) .home-billboard-content p { color: #e0e1eb !important; }
+@media (max-width:800px) {
+  body:has(.product-site-header) .home-billboard::after {
+    background: linear-gradient(180deg, rgba(48, 47, 62, .98) 0%, rgba(63, 61, 82, .90) 39%, rgba(83, 79, 106, .25) 77%, rgba(48, 47, 62, .05) 100%) !important;
+  }
+}
+
+/* Keep the coloured layer under the copy; reveal the image sooner on the right. */
+body:has(.product-site-header) .home-billboard::after {
+  background: linear-gradient(90deg, rgba(48, 47, 62, .98) 0%, rgba(63, 61, 82, .93) 31%, rgba(83, 79, 106, .42) 46%, rgba(48, 47, 62, 0) 67%) !important;
+}
+
+/* Mobile product page: price, availability and purchase decision stay obvious. */
+@media (max-width:800px) {
+  body:has(.product-site-header) .product-page {
+    padding: 16px 16px calc(118px + env(safe-area-inset-bottom)) !important;
+  }
+  body:has(.product-site-header) .product-breadcrumbs {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 14px !important;
+    color: #747284 !important;
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+  body:has(.product-site-header) .product-breadcrumbs .current {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  body:has(.product-site-header) .product-gallery { margin-bottom: 19px !important; }
+  body:has(.product-site-header) .product-summary > p { margin-bottom: 7px !important; }
+  body:has(.product-site-header) .product-summary h1 {
+    margin-bottom: 13px !important;
+    font-size: 25px !important;
+    line-height: 1.14 !important;
+    letter-spacing: -1px !important;
+  }
+  body:has(.product-site-header) .detail-review-summary { margin-top: 10px !important; }
+  body:has(.product-site-header) .detail-price {
+    gap: 10px !important;
+    margin: 12px 0 5px !important;
+  }
+  body:has(.product-site-header) .detail-price strong {
+    font-size: 32px !important;
+    letter-spacing: -.9px !important;
+    line-height: 1 !important;
+  }
+  body:has(.product-site-header) .detail-price s {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+  body:has(.product-site-header) .stock.in-stock {
+    display: inline-flex;
+    align-items: center;
+    min-height: 27px;
+    margin: 0 0 10px !important;
+    padding: 4px 9px;
+    border: 1px solid #bce6d1;
+    border-radius: 999px;
+    background: #effbf4;
+    color: #188255 !important;
+    font-size: 12px !important;
+  }
+  body:has(.product-site-header) .trust-grid-before-purchase {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    margin: 4px 0 12px !important;
+    padding: 10px 8px !important;
+    border: 1px solid #dceaf1;
+    border-radius: 12px;
+    background: #fff;
+  }
+  body:has(.product-site-header) .trust-grid-before-purchase > div {
+    justify-content: center;
+    gap: 5px !important;
+  }
+  body:has(.product-site-header) .trust-grid-before-purchase b {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+    border-radius: 7px;
+    font-size: 12px;
+  }
+  body:has(.product-site-header) .trust-grid-before-purchase span {
+    font-size: 10px !important;
+    line-height: 1.18 !important;
+  }
+  body:has(.product-site-header) .trust-grid-before-purchase small { display: none; }
+  body:has(.product-site-header) .detail-buy { min-height: 54px; font-size: 15px !important; }
+  body:has(.product-site-header) .detail-favorite { width: 54px; flex-basis: 54px; }
+  body:has(.product-site-header) .conversion-actions {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    margin-top: 9px !important;
+  }
+  body:has(.product-site-header) .quick-order-trigger,
+  body:has(.product-site-header) .installment-trigger {
+    min-height: 49px;
+    padding: 7px 5px;
+    font-size: 11px !important;
+  }
+  body:has(.product-site-header) .installment-trigger span { font-size: 9px !important; }
+  body:has(.product-site-header) .sticky-purchase {
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    grid-template-columns: 48px minmax(0, 1fr) 120px !important;
+    grid-template-rows: 20px 37px !important;
+    gap: 1px 8px !important;
+    padding: 9px 12px calc(9px + env(safe-area-inset-bottom)) !important;
+    border-width: 1px 0 0 !important;
+    border-radius: 15px 15px 0 0 !important;
+    box-shadow: 0 -10px 30px rgba(39, 31, 75, .14) !important;
+  }
+  body:has(.product-site-header) .sticky-purchase-image { width: 48px; height: 48px; }
+  body:has(.product-site-header) .sticky-purchase-price strong { font-size: 15px !important; }
+  body:has(.product-site-header) .sticky-purchase > button {
+    min-width: 120px !important;
+    min-height: 37px;
+    padding: 8px 5px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Storefront visual system — editorial surfaces instead of a generic catalogue. */
+body:has(.product-site-header) {
+  color: #29263a !important;
+  background: linear-gradient(145deg, #f9f8fc 0%, #f2f1f7 54%, #faf9fc 100%) !important;
+}
+html:has(body .product-site-header) {
+  /* On a pinch-zoomed mobile page the browser may reveal the root canvas
+     outside body. Keep that canvas in the storefront's own colour. */
+  background: #f7f6fa !important;
+}
+body:has(.product-site-header) .product-site-header {
+  background: rgba(255, 255, 255, .92) !important;
+  border-bottom-color: #e8e2f0 !important;
+  box-shadow: 0 9px 30px rgba(47, 31, 84, .055) !important;
+  backdrop-filter: blur(16px);
+}
+body:has(.product-site-header) .product-site-header .product-nav { border-top-color: #eee9f4 !important; }
+body:has(.product-site-header) .catalog-shell,
+body:has(.product-site-header) .product-page,
+body:has(.product-site-header) .checkout-page { color: #29263a !important; }
+body:has(.product-site-header) .category-rail {
+  border: 0 !important;
+  border-radius: 24px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body:has(.product-site-header) .rail-heading,
+body:has(.product-site-header) .top-products-head,
+body:has(.product-site-header) .results-heading,
+body:has(.product-site-header) .section-heading {
+  position: relative;
+}
+body:has(.product-site-header) .rail-heading h2,
+body:has(.product-site-header) .top-products-head h2,
+body:has(.product-site-header) .results-heading h1,
+body:has(.product-site-header) .section-heading h2,
+body:has(.product-site-header) .product-page h2,
+body:has(.product-site-header) .product-page h3 { color: #29263a !important; }
+body:has(.product-site-header) .category-card {
+  overflow: hidden;
+  border: 1px solid #e8e1ef !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #fff 0%, #fcfbfe 100%) !important;
+  box-shadow: 0 10px 25px rgba(54, 39, 83, .055) !important;
+}
+body:has(.product-site-header) .category-card:hover {
+  border-color: #bca1dc !important;
+  box-shadow: 0 18px 37px rgba(66, 40, 113, .15) !important;
+  transform: translateY(-3px);
+}
+body:has(.product-site-header) .product-card {
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .82);
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+body:has(.product-site-header) .product-card:hover {
+  border-color: #ddd0ea;
+  box-shadow: 0 17px 35px rgba(49, 32, 83, .11);
+  transform: translateY(-4px);
+}
+body:has(.product-site-header) .product-image-wrap {
+  border: 1px solid #f0ebf4 !important;
+  border-radius: 14px !important;
+  background: radial-gradient(circle at 50% 30%, #fff 0%, #faf8fc 70%) !important;
+}
+body:has(.product-site-header) .product-content { padding: 13px 5px 5px !important; }
+body:has(.product-site-header) .product-card h2 { color: #302c42; font-weight: 750 !important; }
+body:has(.product-site-header) .product-card h2 a:hover { color: #5e2ca5 !important; }
+body:has(.product-site-header) .product-badge {
+  border-radius: 7px !important;
+  background: #f3edff !important;
+  color: #602aa5 !important;
+  border-color: #dfd0f5 !important;
+  box-shadow: none !important;
+}
+body:has(.product-site-header) .product-labels {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+body:has(.product-site-header) .product-labels .product-badge {
+  position: static;
+  display: inline-flex;
+}
+body:has(.product-site-header) .product-gift-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 5px 8px;
+  border: 1px solid #bfe7d4;
+  border-radius: 7px;
+  background: #e9faf2;
+  color: #19734d;
+  box-shadow: none;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1;
+}
+@media(max-width:800px) {
+  body:has(.product-site-header) .product-labels { top: 7px; left: 7px; gap: 4px; }
+  body:has(.product-site-header) .product-gift-badge { min-height: 21px; padding: 4px 7px; font-size: 9px; }
+}
+body:has(.product-site-header) .card-favorite {
+  border-color: #eee8f2 !important;
+  color: #4e4860 !important;
+  box-shadow: 0 6px 16px rgba(57, 45, 82, .09) !important;
+}
+body:has(.product-site-header) .add-to-cart {
+  border-radius: 999px !important;
+  font-weight: 850 !important;
+}
+body:has(.product-site-header) .product-page .product-summary {
+  padding: 25px !important;
+  border: 1px solid #e8e1ef !important;
+  border-radius: 22px !important;
+  background: rgba(255, 255, 255, .88) !important;
+  box-shadow: 0 16px 38px rgba(47, 30, 78, .07) !important;
+}
+body:has(.product-site-header) .product-summary h1 { color: #29263a !important; }
+body:has(.product-site-header) .product-summary-lead,
+body:has(.product-site-header) .trust-grid-before-purchase {
+  border-radius: 14px !important;
+}
+body:has(.product-site-header) .related-products {
+  padding: 30px;
+  border: 1px solid #e8e1ef;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff 0%, #f8f4fd 100%);
+}
+body:has(.product-site-header) .related-card {
+  border: 1px solid #e9e3ef !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+body:has(.product-site-header) .related-card:hover {
+  border-color: #bea4de !important;
+  box-shadow: 0 14px 28px rgba(63, 37, 107, .12) !important;
+}
+body:has(.product-site-header) .site-footer {
+  border-top: 0 !important;
+  background: #2c2443 !important;
+}
+@media (max-width:800px) {
+  body:has(.product-site-header), html:has(body .product-site-header) { background: #f7f6fa !important; }
+  body:has(.product-site-header) .category-card { border-radius: 14px !important; }
+  body:has(.product-site-header) .product-card { padding: 5px; border-radius: 15px; }
+  body:has(.product-site-header) .product-content { padding: 10px 3px 3px !important; }
+  body:has(.product-site-header) .product-page .product-summary { padding: 0 !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important; }
+  body:has(.product-site-header) .related-products { margin-right: -2px; margin-left: -2px; padding: 20px 14px; border-radius: 18px; }
+}
+
+body:has(.product-site-header) .checkout-lead {
+  max-width: 520px;
+  margin: 8px 0 0;
+  color: #676277;
+  font-size: 14px;
+  line-height: 1.45;
+}
+body:has(.product-site-header) .trust-return-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+body:has(.product-site-header) .trust-return-link:hover span { color: #0aa3c8; }
+@media (max-width:800px) {
+  body:has(.product-site-header) .checkout-lead { font-size: 13px; }
+  body:has(.product-site-header) .trust-grid-before-purchase > .trust-return-link {
+    justify-content: center;
+    gap: 5px !important;
+  }
+}
+
+/* The cart confirmation must visibly differ from the violet buy action. */
+body:has(.product-site-header) .product-card .add-to-cart.is-added {
+  background: #20a56c !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px rgba(32, 165, 108, .28) !important;
+}

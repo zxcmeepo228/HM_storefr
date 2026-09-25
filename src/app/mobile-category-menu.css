@@ -1,0 +1,11 @@
+/* Storefront only: keep the header category menu above the homepage search. */
+@media (max-width: 800px) {
+  .product-site-header {
+    position: relative;
+    z-index: 60;
+  }
+
+  .product-site-header .category-menu { z-index: 61; }
+  .product-site-header .category-dropdown { z-index: 62; }
+
+}
